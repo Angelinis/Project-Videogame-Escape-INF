@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/main_menu_como_jogar_voice_text.mp3-0ace0cf4742a76d427359bc979a0f8d6.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/MainMenu/main_menu_como_jogar_voice_text.mp3"
+dest_files=[ "res://.import/main_menu_como_jogar_voice_text.mp3-0ace0cf4742a76d427359bc979a0f8d6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

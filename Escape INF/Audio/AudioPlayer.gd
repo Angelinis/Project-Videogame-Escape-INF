@@ -8,6 +8,10 @@ func _ready(): # Ajusta o volume antes de iniciar o jogo
 	AudioServer.set_bus_volume_db(music_bus, linear2db(0.3))
 	AudioServer.set_bus_volume_db(sound_bus, linear2db(0.4))
 
+func play_one_shot(audio, bus: String):
+	var audioStreamPlayer = play_audio(audio, bus)
+	audioStreamPlayer.autoplay = false
+
 func play_audio(audio, bus: String):
 	var audioStreamPlayer = AudioStreamPlayer.new()
 	audioStreamPlayer.stream = audio

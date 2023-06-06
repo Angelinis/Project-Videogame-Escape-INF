@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/main_menu_sair_voice_text.mp3-ef86080ac632f8a006af112f2b56f301.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/MainMenu/main_menu_sair_voice_text.mp3"
+dest_files=[ "res://.import/main_menu_sair_voice_text.mp3-ef86080ac632f8a006af112f2b56f301.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
