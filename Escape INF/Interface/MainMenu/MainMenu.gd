@@ -66,7 +66,8 @@ func select_current_button():
 var SOUNDMENU1 = preload("res://Audio/AudioInclusive/MainMenu/main_menu_jogar_voice_text.mp3")
 var SOUNDMENU2 = preload("res://Audio/AudioInclusive/MainMenu/main_menu_como_jogar_voice_text.mp3")
 var SOUNDMENU3 = preload("res://Audio/AudioInclusive/MainMenu/main_menu_sair_voice_text.mp3")
-var SOUNDARRAY = [SOUNDMENU1, SOUNDMENU2, SOUNDMENU3]
+var SOUNDMENU4 = preload("res://Audio/AudioInclusive/MainMenu/main_menu_continuar_voice_text.mp3")
+var SOUNDARRAY = [SOUNDMENU1, SOUNDMENU2, SOUNDMENU3, SOUNDMENU4]
 
 
 func update_button_selection():
@@ -74,8 +75,9 @@ func update_button_selection():
 		var button = $Buttons.get_child(i)
 
 		if i == selectedButtonIndex:
+			if i ==0 and $Buttons/PlayButton.text == "CONTINUAR":
+				i = 3
 			button.add_color_override("font_color", Color(1, 1, 1))
-			var audio = preload("res://Audio/AudioInclusive/MainMenu/main_menu_jogar_voice_text.mp3")
 			AudioPlayer.play_one_shot(SOUNDARRAY[i], "Sound") 
 		else:
 			button.add_color_override("font_color", Color(0.5, 0.5, 0.5))
