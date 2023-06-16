@@ -78,7 +78,7 @@ func update_button_selection():
 			if i ==0 and $Buttons/PlayButton.text == "CONTINUAR":
 				i = 3
 			button.add_color_override("font_color", Color(1, 1, 1))
-			AudioPlayer.play_one_shot(SOUNDARRAY[i], "Sound") 
+			AudioPlayer.play_one_shot(SOUNDARRAY[i], "MenuSpeech") 
 		else:
 			button.add_color_override("font_color", Color(0.5, 0.5, 0.5))
 

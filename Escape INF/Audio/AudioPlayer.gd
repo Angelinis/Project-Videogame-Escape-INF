@@ -2,11 +2,16 @@ extends Node
 
 onready var music_bus := AudioServer.get_bus_index("Music")
 onready var sound_bus := AudioServer.get_bus_index("Sound")
+onready var menu_speech_bus := AudioServer.get_bus_index("MenuSpeech")
+onready var character_speech_bus := AudioServer.get_bus_index("CharacterSpeech")
 onready var music_playing = false
 
 func _ready(): # Ajusta o volume antes de iniciar o jogo
 	AudioServer.set_bus_volume_db(music_bus, linear2db(0.3))
 	AudioServer.set_bus_volume_db(sound_bus, linear2db(0.4))
+	AudioServer.set_bus_volume_db(menu_speech_bus, linear2db(0.6))
+	AudioServer.set_bus_volume_db(character_speech_bus, linear2db(0.6))
+	
 
 func play_one_shot(audio, bus: String):
 	var audioStreamPlayer = play_audio(audio, bus)
