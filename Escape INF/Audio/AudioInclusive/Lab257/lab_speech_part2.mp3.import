@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lab_speech_part2.mp3-05053eab2697c5bfa3542c8159ea014f.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Lab257/lab_speech_part2.mp3"
+dest_files=[ "res://.import/lab_speech_part2.mp3-05053eab2697c5bfa3542c8159ea014f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

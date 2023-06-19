@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ui_backpack_closed.mp3-12a8a96b4087b9270ba2c6dc944c0d98.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/UI/ui_backpack_closed.mp3"
+dest_files=[ "res://.import/ui_backpack_closed.mp3-12a8a96b4087b9270ba2c6dc944c0d98.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

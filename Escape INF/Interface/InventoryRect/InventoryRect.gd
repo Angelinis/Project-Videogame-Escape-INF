@@ -3,6 +3,11 @@ extends Control
 const ITEM_PANEL = preload("res://Interface/InventoryRect/itemPanel.tres")
 const SELECTED_ITEM_PANEL = preload("res://Interface/InventoryRect/selectedItemPanel.tres")
 
+const BACKPACK_CLOSED = preload("res://Audio/AudioInclusive/UI/ui_backpack_closed.mp3")
+const BACKPACK_OPEN = preload("res://Audio/AudioInclusive/UI/ui_backpack_open.mp3")
+
+
+
 var hovering_slot_index = null
 var selected_slot_index = null setget select_slot
 
@@ -32,6 +37,18 @@ func slot_mouse_exited():
 	hovering_slot_index = null
 
 func _input(event):
+	if event is InputEventKey:
+		if event.scancode == KEY_M:
+			var inventoryRect = get_parent() # Access the parent node directly
+			if event.pressed and !inventoryRect.visible:
+				inventoryRect.visible = true
+				AudioPlayer.play_audio(BACKPACK_OPEN, "MenuSpeech")
+				Blur.visible = false
+			elif event.pressed and inventoryRect.visible:
+				inventoryRect.visible = false
+				AudioPlayer.play_audio(BACKPACK_CLOSED, "MenuSpeech")
+				Blur.unfocus_blur()
+						
 	if event is InputEventMouseButton:
 		
 		if event.button_index == BUTTON_LEFT and event.pressed and hovering_slot_index != null:
@@ -85,6 +102,9 @@ func _on_InventoryRect_gui_input(event):
 		if event.pressed and event.button_index == BUTTON_LEFT:
 			get_parent().show()
 			Blur.unfocus_blur()
+
+
+
 
 func _on_InventoryRect_mouse_entered():
 	_hovering = true

@@ -1,5 +1,7 @@
 extends Area2D
 
+const SPEECH_1 = preload("res://Audio/AudioInclusive/Interactable/Door/interactable_door_closed.mp3")
+
 export(bool) var locked := false
 
 export(Resource) var item_needed
@@ -45,7 +47,7 @@ func interact():
 			Inventory.remove_item(item_needed)
 			ProgressManager.anxiety -= 10
 		else:
-			TextBox.show_texts(["A porta está trancada."])
+			TextBox.show_texts(["A porta está trancada."], [SPEECH_1])
 			AudioPlayer.play_audio(preload("res://Audio/SFX/door-locked.wav"), "Sound")
 	else:
 		ProgressManager.previous_room = room_file

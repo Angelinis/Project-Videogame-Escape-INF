@@ -1,5 +1,10 @@
 extends Node
 
+const SPEECH_1 = preload("res://Audio/AudioInclusive/Anxiety/anxiety_speech_part1.mp3")
+const SPEECH_2 = preload("res://Audio/AudioInclusive/Anxiety/anxiety_speech_part2.mp3")
+const SPEECH_3 = preload("res://Audio/AudioInclusive/Anxiety/anxiety_speech_part3.mp3")
+
+
 var previous_room: String
 var previous_wall_name: String
 var previous_wall_index: int
@@ -81,7 +86,7 @@ func set_anxiety(value):
 	emit_signal("anxiety_changed")
 	
 	if first_time_anxiety and delta > 0:
-		TextBox.show_texts(["Acho que mexer nas coisas sem pensar só vai aumentar minha ansiedade... Preciso focar!"])
+		TextBox.show_texts(["Acho que mexer nas coisas sem pensar só vai aumentar minha ansiedade... Preciso focar!"], [SPEECH_1])
 		first_time_anxiety = false
 	
 	if anxiety == 100:
@@ -99,12 +104,12 @@ func set_anxiety(value):
 	
 	elif delta > 0 and anxiety >= 90:
 		if anxiety == 90:
-			TextBox.show_texts(["Estou ansioso demais, se continuar assim vou acabar desmaiando."])
+			TextBox.show_texts(["Estou ansioso demais, se continuar assim vou acabar desmaiando."], [SPEECH_2])
 		Blur.get_node("ColorRect/AnimationPlayer").play("SuperDizzy")
 	
 	elif delta > 0 and anxiety >= 70:
 		if anxiety == 70:
-			TextBox.show_texts(["Ansiedade é uma coisa preocupante, melhor parar um pouco!"])
+			TextBox.show_texts(["Ansiedade é uma coisa preocupante, melhor parar um pouco!"], [SPEECH_3])
 		Blur.get_node("ColorRect/AnimationPlayer").play("Dizzy")
 
 func check_progress(progress_type: String, room = null, wall = null, object = null):

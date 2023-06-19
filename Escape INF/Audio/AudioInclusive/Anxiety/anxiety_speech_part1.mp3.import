@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/anxiety_speech_part1.mp3-1dcfcfcaa06bb882988e69fa546f7356.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Anxiety/anxiety_speech_part1.mp3"
+dest_files=[ "res://.import/anxiety_speech_part1.mp3-1dcfcfcaa06bb882988e69fa546f7356.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
