@@ -6,6 +6,7 @@ const CHAR_AUDIO = preload("res://Interface/TextBox/CharSFX.wav")
 const PROCCEED_AUDIO = preload("res://Interface/TextBox/ProcceedSFX.wav")
 
 var texts: Array
+var audios: Array
 var text_count = 0
 
 var done := true setget setDone
@@ -16,19 +17,26 @@ onready var icon = $Control/TextBox/TextureRect
 onready var timer = $Control/TextBox/Timer
 onready var textLabel = $Control/TextBox/Text
 
-func show_texts(_texts):
+func show_texts(_texts, _audios=[]):
 	show()
 	texts = _texts
+	audios = _audios
 	text_count = 0
-	_show_text(texts[text_count])
+	if _audios==[]: 
+		_show_text(texts[text_count])
+	else: 
+		_show_text(texts[text_count], audios[text_count])
 
-func _show_text(_text):
+func _show_text(_text, _audio = false):
 	self.done = false
 	icon.hide()
 	
 	textLabel.text = _text
 	textLabel.visible_characters = 0
 	timer.start(time)
+	if (_audio):
+		AudioPlayer.play_audio(_audio, "CharacterSpeech")
+
 
 func _input(event):
 	if visible:
@@ -40,11 +48,35 @@ func _input(event):
 				elif done:
 					if text_count < texts.size() - 1:
 						text_count += 1
-						_show_text(texts[text_count])
+						if audios:
+							_show_text(texts[text_count],audios[text_count])
+						else: 
+							_show_text(texts[text_count])
 					else:
 						hide()
 						AudioPlayer.play_audio(PROCCEED_AUDIO, "Sound")
 						emit_signal("texts_done")
+
+#Adding Input Listener for Enter to Change Text						
+						
+						
+		elif event is InputEventKey:
+			if event.scancode == KEY_ENTER and event.pressed:
+				get_tree().set_input_as_handled()
+				if not done:
+					self.done = true
+				elif done:
+					if text_count < texts.size() - 1:
+						text_count += 1
+						if audios:
+							_show_text(texts[text_count],audios[text_count])
+						else: 
+							_show_text(texts[text_count])
+					else:
+						hide()
+						AudioPlayer.play_audio(PROCCEED_AUDIO, "Sound")
+						emit_signal("texts_done")
+						
 
 func _on_Timer_timeout():
 	if not done:

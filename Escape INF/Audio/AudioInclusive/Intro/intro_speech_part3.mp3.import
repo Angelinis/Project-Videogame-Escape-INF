@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/intro_speech_part3.mp3-e06a569b3ff0c3b17e1db5277f1f5010.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Intro/intro_speech_part3.mp3"
+dest_files=[ "res://.import/intro_speech_part3.mp3-e06a569b3ff0c3b17e1db5277f1f5010.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
