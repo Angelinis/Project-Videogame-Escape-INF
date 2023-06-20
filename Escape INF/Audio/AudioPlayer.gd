@@ -35,3 +35,10 @@ func on_audio_finished(audioStreamPlayer):
 func stop_all_audios():
 	for audioPlayer in get_children():
 		audioPlayer.queue_free()
+
+func stop_all_audios_bus(bus: String):
+	for audioPlayer in get_children():
+		if audioPlayer.bus == bus:
+			audioPlayer.stop()
+			audioPlayer.queue_free()
+

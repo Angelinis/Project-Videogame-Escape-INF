@@ -6,10 +6,13 @@ export (String, FILE, "*.tscn") var tutorial_scene
 var SOUNDTRACK2 = preload("res://Audio/SFX/anime_soundtrack_inf.mp3")
 
 func _ready():
+	AudioPlayer.stop_all_audios_bus("UISound")
+	AudioPlayer.stop_all_audios_bus("CharacterSpeech")
 	Blur.visible = false
 	if AudioPlayer.music_playing == false:
 		AudioPlayer.play_audio(SOUNDTRACK2, "Music")
 		AudioPlayer.music_playing = true
+
 
 	if not ProgressManager.game_started:
 		$Buttons/PlayButton.text = "JOGAR"

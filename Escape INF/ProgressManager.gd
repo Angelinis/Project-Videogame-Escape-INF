@@ -3,7 +3,8 @@ extends Node
 const SPEECH_1 = preload("res://Audio/AudioInclusive/Anxiety/anxiety_speech_part1.mp3")
 const SPEECH_2 = preload("res://Audio/AudioInclusive/Anxiety/anxiety_speech_part2.mp3")
 const SPEECH_3 = preload("res://Audio/AudioInclusive/Anxiety/anxiety_speech_part3.mp3")
-
+const UI_ANXIETY_1 = preload("res://Audio/AudioInclusive/Anxiety/ui_middle_anxiety_sound.mp3")
+const UI_ANXIETY_2 = preload("res://Audio/AudioInclusive/Anxiety/ui_hard_anxiety_sound.mp3")
 
 var previous_room: String
 var previous_wall_name: String
@@ -89,6 +90,18 @@ func set_anxiety(value):
 		TextBox.show_texts(["Acho que mexer nas coisas sem pensar só vai aumentar minha ansiedade... Preciso focar!"], [SPEECH_1])
 		first_time_anxiety = false
 	
+	if anxiety < 70:
+		AudioPlayer.stop_all_audios_bus("UISound")
+		
+	elif anxiety< 90:
+		AudioPlayer.stop_all_audios_bus("UISound")
+		AudioPlayer.play_audio(UI_ANXIETY_1, "UISound")
+		
+	elif anxiety< 99:
+		AudioPlayer.stop_all_audios_bus("UISound")
+		AudioPlayer.play_audio(UI_ANXIETY_1, "UISound")
+		AudioPlayer.play_audio(UI_ANXIETY_2, "UISound")
+	
 	if anxiety == 100:
 		Blur.get_node("ColorRect/AnimationPlayer").play("AnxietyAttack")
 		Blur.layer = 1
@@ -101,6 +114,7 @@ func set_anxiety(value):
 		
 		var _a = get_tree().change_scene(tmp_scene) #final_scene
 		emit_signal("anxiety_attack")
+
 	
 	elif delta > 0 and anxiety >= 90:
 		if anxiety == 90:

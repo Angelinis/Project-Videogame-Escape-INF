@@ -35,6 +35,7 @@ func _show_text(_text, _audio = false):
 	textLabel.visible_characters = 0
 	timer.start(time)
 	if (_audio):
+		AudioPlayer.stop_all_audios_bus("CharacterSpeech")
 		AudioPlayer.play_audio(_audio, "CharacterSpeech")
 
 

@@ -1,5 +1,7 @@
 extends Panel
 
+onready var pause = false
+
 const MAIN_MENU_PATH = "res://Interface/MainMenu/MainMenu.tscn"
 
 func _on_PauseMenuRect_gui_input(event):
@@ -13,6 +15,19 @@ func _on_Resume_pressed():
 	hide()
 	Blur.visible = false
 	get_tree().paused = false
+
+func _input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_SPACE and pause == false:
+			pause = true
+			show()
+			Blur.unfocus_blur()
+			get_tree().paused = true
+		elif event.pressed and event.scancode == KEY_SPACE and pause == true:
+			hide()
+			Blur.visible = false
+			get_tree().paused = false	
+			pause = false
 
 func _on_MainMenuButton_pressed():
 	get_tree().paused = false

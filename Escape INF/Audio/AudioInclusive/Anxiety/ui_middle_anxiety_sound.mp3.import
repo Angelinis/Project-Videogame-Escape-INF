@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ui_middle_anxiety_sound.mp3-7751bbcba8b4cde22ffc1f22d1c1c1f5.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Anxiety/ui_middle_anxiety_sound.mp3"
+dest_files=[ "res://.import/ui_middle_anxiety_sound.mp3-7751bbcba8b4cde22ffc1f22d1c1c1f5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
