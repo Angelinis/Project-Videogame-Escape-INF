@@ -1,5 +1,7 @@
 extends Area2D
 
+const SPEECH_1 = preload("res://Audio/AudioInclusive/Interactable/Door/interactable_door_block_progress.mp3")
+
 var _hovering = false
 
 export(String, MULTILINE) var needed_text
@@ -15,5 +17,8 @@ func _on_BlockProgress_mouse_exited():
 func _input(event):
 	if _hovering:
 		if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-			TextBox.show_texts([needed_text])
+			if needed_text == "Não consigo ver a fechadura com a luz apagada.":
+				TextBox.show_texts([needed_text],[SPEECH_1])
+			else:	
+				TextBox.show_texts([needed_text])
 			get_tree().set_input_as_handled()

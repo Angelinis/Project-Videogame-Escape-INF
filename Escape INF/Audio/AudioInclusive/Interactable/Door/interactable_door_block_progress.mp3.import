@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/interactable_door_block_progress.mp3-9ef5c7e9cfcdd142f9a1b744e5b949f4.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Interactable/Door/interactable_door_block_progress.mp3"
+dest_files=[ "res://.import/interactable_door_block_progress.mp3-9ef5c7e9cfcdd142f9a1b744e5b949f4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

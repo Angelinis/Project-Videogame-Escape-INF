@@ -1,6 +1,6 @@
 extends HSlider
 
-export(String, "Master", "Music", "Sound", "MenuSpeech", "CharacterSpeech") var audio_bus_name := "Master"
+export(String, "Master", "Music", "Sound", "MenuSpeech", "CharacterSpeech", "UISound") var audio_bus_name := "Master"
 
 onready var _bus := AudioServer.get_bus_index(audio_bus_name)
 

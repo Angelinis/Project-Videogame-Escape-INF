@@ -42,12 +42,12 @@ func _input(event):
 			var inventoryRect = get_parent() # Access the parent node directly
 			if event.pressed and !inventoryRect.visible:
 				inventoryRect.visible = true
-				AudioPlayer.play_audio(BACKPACK_OPEN, "MenuSpeech")
-				Blur.visible = false
+				AudioPlayer.play_audio(BACKPACK_OPEN, "UISound")
+				Blur.unfocus_blur()
 			elif event.pressed and inventoryRect.visible:
 				inventoryRect.visible = false
-				AudioPlayer.play_audio(BACKPACK_CLOSED, "MenuSpeech")
-				Blur.unfocus_blur()
+				AudioPlayer.play_audio(BACKPACK_CLOSED, "UISound")
+				Blur.visible = false
 						
 	if event is InputEventMouseButton:
 		
