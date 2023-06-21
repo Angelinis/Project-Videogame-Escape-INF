@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ui_location_parede_4.mp3-89a406337b02dac87501f469cb7f9975.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/RoomName/ui_location_parede_4.mp3"
+dest_files=[ "res://.import/ui_location_parede_4.mp3-89a406337b02dac87501f469cb7f9975.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

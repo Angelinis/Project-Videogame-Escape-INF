@@ -24,3 +24,6 @@ func _input(event):
 		elif event.scancode == KEY_RIGHT and event.pressed:
 			walls_manager.current_wall_index += 1
 			AudioPlayer.play_audio(CHANGE_VIEW_SOUND, "UISound")
+		if event.scancode == KEY_L and event.pressed:
+			ProgressManager.get_current_room_and_wall(walls_manager.current_wall_index)
+

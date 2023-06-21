@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ui_location_lab257.mp3-8ec4e08b26f2f3885bc39589adfdda89.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/RoomName/ui_location_lab257.mp3"
+dest_files=[ "res://.import/ui_location_lab257.mp3-8ec4e08b26f2f3885bc39589adfdda89.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

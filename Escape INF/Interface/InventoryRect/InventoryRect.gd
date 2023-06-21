@@ -18,6 +18,8 @@ onready var itemDescription := $HBoxContainer/ItemDescription
 
 signal selected_item_changed
 
+#signal inventory_visibility_changed(visible)
+
 func _ready():
 	
 	var _a = Inventory.connect("item_changed", self, "update_slot")
@@ -48,6 +50,7 @@ func _input(event):
 				inventoryRect.visible = false
 				AudioPlayer.play_audio(BACKPACK_CLOSED, "UISound")
 				Blur.visible = false
+			#emit_signal("inventory_visibility_changed", inventoryRect.visible)  # Emit the signal
 						
 	if event is InputEventMouseButton:
 		

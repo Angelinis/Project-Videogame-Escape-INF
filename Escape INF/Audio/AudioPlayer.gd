@@ -6,6 +6,7 @@ onready var menu_speech_bus := AudioServer.get_bus_index("MenuSpeech")
 onready var character_speech_bus := AudioServer.get_bus_index("CharacterSpeech")
 onready var ui_bus := AudioServer.get_bus_index("UISound")
 onready var music_playing = false
+var audioQueue := []
 
 func _ready(): # Ajusta o volume antes de iniciar o jogo
 	AudioServer.set_bus_volume_db(music_bus, linear2db(0.3))
@@ -14,6 +15,20 @@ func _ready(): # Ajusta o volume antes de iniciar o jogo
 	AudioServer.set_bus_volume_db(character_speech_bus, linear2db(0.6))
 	AudioServer.set_bus_volume_db(ui_bus, linear2db(0.6))
 	
+
+# Plays a series of audio files in the specified bus
+func play_audios(audios: Array, bus: String):
+	audioQueue = audios
+	play_next_audio(bus)
+
+func play_next_audio(bus: String):
+	if audioQueue.size() > 0:
+		var audio = audioQueue[0]
+		audioQueue.remove(0)
+		var audioStreamPlayer = play_audio(audio, bus)
+		yield(audioStreamPlayer, "finished") # Wait for current audio to finish playing
+		play_next_audio(bus)
+
 
 func play_one_shot(audio, bus: String):
 	var audioStreamPlayer = play_audio(audio, bus)

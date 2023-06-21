@@ -3,6 +3,11 @@ extends Node
 const SPEECH_1 = preload("res://Audio/AudioInclusive/Anxiety/anxiety_speech_part1.mp3")
 const SPEECH_2 = preload("res://Audio/AudioInclusive/Anxiety/anxiety_speech_part2.mp3")
 const SPEECH_3 = preload("res://Audio/AudioInclusive/Anxiety/anxiety_speech_part3.mp3")
+const ROOM_257 = preload("res://Audio/AudioInclusive/RoomName/ui_location_lab257.mp3")
+const WALL_NUMBER_1 = preload("res://Audio/AudioInclusive/RoomName/ui_location_parede_1.mp3")
+const WALL_NUMBER_2 = preload("res://Audio/AudioInclusive/RoomName/ui_location_parede_2.mp3")
+const WALL_NUMBER_3 = preload("res://Audio/AudioInclusive/RoomName/ui_location_parede_3.mp3")
+const WALL_NUMBER_4 = preload("res://Audio/AudioInclusive/RoomName/ui_location_parede_4.mp3")
 const UI_ANXIETY_1 = preload("res://Audio/AudioInclusive/Anxiety/ui_middle_anxiety_sound.mp3")
 const UI_ANXIETY_2 = preload("res://Audio/AudioInclusive/Anxiety/ui_hard_anxiety_sound.mp3")
 
@@ -33,6 +38,37 @@ var game_started = false
 
 signal anxiety_changed
 signal anxiety_attack
+
+
+# Add a new function to get the name of the current room file and wall number
+
+func get_room_name_from_path(path):
+	var base_name = path.get_basename()
+	var extension = path.get_extension()
+	if extension == "tscn":
+		var room_name = base_name.get_base_dir().get_file().get_basename()
+		return room_name
+	else:
+		return ""
+
+func get_current_room_and_wall(current_wall):
+	var current_scene = get_tree().current_scene
+	var current_room = current_scene.get_filename()
+	var room_name = get_room_name_from_path(current_room)
+	var room_audio
+	var wall_audio
+	if room_name=="Lab257":
+		room_audio = ROOM_257
+	if current_wall==0:
+		wall_audio = WALL_NUMBER_1
+	elif current_wall==1:
+		wall_audio = WALL_NUMBER_2
+	elif current_wall==2:
+		wall_audio = WALL_NUMBER_3
+	elif current_wall==3:
+		wall_audio = WALL_NUMBER_4
+	AudioPlayer.stop_all_audios_bus("UISound")
+	AudioPlayer.play_audios([room_audio, wall_audio], "UISound")
 
 func add_completed_puzzles(room_name, wall_index, puzzle):
 	
