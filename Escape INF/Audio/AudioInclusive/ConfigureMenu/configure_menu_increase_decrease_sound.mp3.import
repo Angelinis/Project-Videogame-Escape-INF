@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/configure_menu_increase_decrease_sound.mp3-3be01c5464d9099e7334560e4f2b3e63.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/ConfigureMenu/configure_menu_increase_decrease_sound.mp3"
+dest_files=[ "res://.import/configure_menu_increase_decrease_sound.mp3-3be01c5464d9099e7334560e4f2b3e63.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
