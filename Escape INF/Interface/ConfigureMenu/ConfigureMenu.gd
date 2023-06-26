@@ -4,10 +4,14 @@ onready var pause = false
 
 var selectedOption = 1
 
-
-#var CONFIGURE_MENU_OPTIONS = [$VBoxContainer/Resume, $VBoxContainer/Sound/Label,
-#							$VBoxContainer/Music/Label, $VBoxContainer/MenuSpeech/Label,
-#							$VBoxContainer/CharacterSpeech/Label, $VBoxContainer/UISound/Label, $VBoxContainer/MainMenuButton]
+var SOUNDMENU1 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_menu_retomar.mp3")
+var SOUNDMENU2 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_menu_efeitos_sonoros.mp3")
+var SOUNDMENU3 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_menu_musica.mp3")
+var SOUNDMENU4 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_menu_som_do_menu.mp3")
+var SOUNDMENU5 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_menu_dialogos.mp3")
+var SOUNDMENU6 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_menu_som_da_interface.mp3")
+var SOUNDMENU7 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_menu_menu_principal.mp3")
+var SOUNDARRAY = [SOUNDMENU1, SOUNDMENU2, SOUNDMENU3, SOUNDMENU4, SOUNDMENU5, SOUNDMENU6, SOUNDMENU7]
 
 const MAIN_MENU_PATH = "res://Interface/MainMenu/MainMenu.tscn"
 
@@ -51,6 +55,12 @@ func _input(event):
 		elif event.pressed and event.scancode == KEY_ENTER and pause:
 			handleSelectedOption()
 			
+		elif event.pressed and event.scancode == KEY_RIGHT and pause:
+			print("derecha")
+			
+		elif event.pressed and event.scancode == KEY_LEFT and pause:
+			print("izquierda")
+			
 			
 func adjustSelectedOption():
 	
@@ -59,7 +69,8 @@ func adjustSelectedOption():
 		
 		if i == selectedOption:
 			button.add_color_override("font_color", Color(1, 1, 1))
-#			AudioPlayer.play_one_shot(SOUNDARRAY[i], "MenuSpeech") 
+			AudioPlayer.play_one_shot(SOUNDARRAY[i-1], "MenuSpeech") 
+
 		else:
 			button.add_color_override("font_color", Color(0.5, 0.5, 0.5))
 

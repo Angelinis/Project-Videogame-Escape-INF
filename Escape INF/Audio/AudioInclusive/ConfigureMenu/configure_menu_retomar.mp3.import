@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/configure_menu_retomar.mp3-6a396d4e0830410c2bdd3698b81268b6.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/ConfigureMenu/configure_menu_retomar.mp3"
+dest_files=[ "res://.import/configure_menu_retomar.mp3-6a396d4e0830410c2bdd3698b81268b6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/configure_menu_dialogos.mp3-7f450f325b58ec6f44c7aa072c01b064.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/ConfigureMenu/configure_menu_dialogos.mp3"
+dest_files=[ "res://.import/configure_menu_dialogos.mp3-7f450f325b58ec6f44c7aa072c01b064.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
