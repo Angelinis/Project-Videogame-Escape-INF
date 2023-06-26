@@ -2,7 +2,12 @@ extends Panel
 
 onready var pause = false
 
-var selectedOption = 0
+var selectedOption = 1
+
+
+#var CONFIGURE_MENU_OPTIONS = [$VBoxContainer/Resume, $VBoxContainer/Sound/Label,
+#							$VBoxContainer/Music/Label, $VBoxContainer/MenuSpeech/Label,
+#							$VBoxContainer/CharacterSpeech/Label, $VBoxContainer/UISound/Label, $VBoxContainer/MainMenuButton]
 
 const MAIN_MENU_PATH = "res://Interface/MainMenu/MainMenu.tscn"
 
@@ -32,9 +37,16 @@ func _input(event):
 			pause = false
 		elif event.pressed and event.scancode == KEY_DOWN and pause:
 			selectedOption += 1
+			if selectedOption >= 8:
+				selectedOption = 1
+
 			adjustSelectedOption()
 		elif event.pressed and event.scancode == KEY_UP and pause:
 			selectedOption -= 1
+			
+			if selectedOption <= 0:
+				selectedOption = 7
+			
 			adjustSelectedOption()
 		elif event.pressed and event.scancode == KEY_ENTER and pause:
 			handleSelectedOption()
@@ -42,9 +54,9 @@ func _input(event):
 			
 func adjustSelectedOption():
 	
-	for i in range($VBoxContainer.get_child_count()):
+	for i in range(1,8):
 		var button = $VBoxContainer.get_child(i)
-
+		
 		if i == selectedOption:
 			button.add_color_override("font_color", Color(1, 1, 1))
 #			AudioPlayer.play_one_shot(SOUNDARRAY[i], "MenuSpeech") 
@@ -52,21 +64,22 @@ func adjustSelectedOption():
 			button.add_color_override("font_color", Color(0.5, 0.5, 0.5))
 
 
+
 func handleSelectedOption():
 	match selectedOption:
-		0:
-			_on_Resume_pressed()
 		1:
-			print("Sound")
+			_on_Resume_pressed()
 		2:
+			print("Sound")
+		3:
 			print("Music")
-		3:	
-			print("MenuSound")
 		4:	
-			print("Dialogues")
+			print("MenuSound")
 		5:	
-			print("UI Sound")
+			print("Dialogues")
 		6:	
+			print("UI Sound")
+		7:	
 			_on_MainMenuButton_pressed()
 
 
