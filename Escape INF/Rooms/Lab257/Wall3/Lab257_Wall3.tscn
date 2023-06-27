@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Interactables/Collectable/Collectable.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Interactables/Puzzles/MiniBoxOpener/puzzle_password_sprite.png" type="Texture" id=7]
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_chave_257.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_mini_caixa.mp3" type="AudioStream" id=10]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 11 )
@@ -58,6 +60,7 @@ shape = SubResource( 1 )
 [node name="HoverInfo" parent="." index="4" instance=ExtResource( 8 )]
 position = Vector2( 111, 79 )
 nome = "Chave do Laboratório 257"
+audio = ExtResource( 9 )
 collectable_path = NodePath("../Chave257")
 
 [node name="CollisionShape2D" parent="HoverInfo" index="0"]
@@ -67,6 +70,7 @@ polygon = PoolVector2Array( -8, 4, -8, -3, 9, -3, 9, 4 )
 [node name="HoverInfo2" parent="." index="5" instance=ExtResource( 8 )]
 position = Vector2( 222, 74 )
 nome = "Mini caixa"
+audio = ExtResource( 10 )
 
 [node name="CollisionShape2D" parent="HoverInfo2" index="0"]
 position = Vector2( 8, 9 )

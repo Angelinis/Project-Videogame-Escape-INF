@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hover_info_caixa_energia.mp3-25ef751c2c57d6c8a79dbedbc83c6503.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_caixa_energia.mp3"
+dest_files=[ "res://.import/hover_info_caixa_energia.mp3-25ef751c2c57d6c8a79dbedbc83c6503.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hover_info_notebook.mp3-ee7adb470dac579c1eba9707cb4e72de.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_notebook.mp3"
+dest_files=[ "res://.import/hover_info_notebook.mp3-ee7adb470dac579c1eba9707cb4e72de.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

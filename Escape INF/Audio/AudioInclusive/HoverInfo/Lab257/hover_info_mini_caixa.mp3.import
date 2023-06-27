@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hover_info_mini_caixa.mp3-2854a541fa23d77d30188d6491b2de71.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_mini_caixa.mp3"
+dest_files=[ "res://.import/hover_info_mini_caixa.mp3-2854a541fa23d77d30188d6491b2de71.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

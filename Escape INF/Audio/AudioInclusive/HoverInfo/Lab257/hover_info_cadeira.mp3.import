@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hover_info_cadeira.mp3-b3aa9b0659529ba86c6dc58b85099b34.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_cadeira.mp3"
+dest_files=[ "res://.import/hover_info_cadeira.mp3-b3aa9b0659529ba86c6dc58b85099b34.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

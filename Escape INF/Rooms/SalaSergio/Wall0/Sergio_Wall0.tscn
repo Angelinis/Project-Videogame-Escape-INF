@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaSergio/Wall0/sergioescritorio_wall0.png" type="Texture" id=2]
@@ -6,9 +6,13 @@
 [ext_resource path="res://Interactables/Puzzles/PuzzleArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Items/Cafe/cafesergio.tres" type="Resource" id=5]
 [ext_resource path="res://Items/Cafe/cafepote.png" type="Texture" id=6]
+[ext_resource path="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_notebook.mp3" type="AudioStream" id=7]
 [ext_resource path="res://Interactables/Collectable/InvisibleCollectable.gd" type="Script" id=8]
 [ext_resource path="res://Interactables/Collectable/InvisibleCollectable.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_computador.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_foto.mp3" type="AudioStream" id=11]
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_cadeira.mp3" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 8.5, 8 )
@@ -61,6 +65,7 @@ __meta__ = {
 
 [node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 12 )]
 nome = "Notebook"
+audio = ExtResource( 7 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
 position = Vector2( 0, 4 )
@@ -68,12 +73,14 @@ polygon = PoolVector2Array( 121, 135, 124, 130, 124, 116, 147, 116, 147, 130, 15
 
 [node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 12 )]
 nome = "Computador"
+audio = ExtResource( 10 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
 polygon = PoolVector2Array( 162, 114, 197, 114, 197, 133, 190, 140, 163, 140, 162, 135 )
 
 [node name="HoverInfo4" parent="HoverInfos" index="2" instance=ExtResource( 12 )]
 nome = "Foto"
+audio = ExtResource( 11 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo4" index="0"]
 position = Vector2( 0, -11 )
@@ -81,6 +88,7 @@ polygon = PoolVector2Array( 123, 103, 123, 39, 189, 39, 189, 103 )
 
 [node name="HoverInfo5" parent="HoverInfos" index="3" instance=ExtResource( 12 )]
 nome = "Cadeira"
+audio = ExtResource( 13 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo5" index="0"]
 polygon = PoolVector2Array( 150, 180, 142, 173, 142, 144, 172, 144, 172, 173, 165, 180 )

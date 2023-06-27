@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/Lab257/Wall0/lab257_wall0.png" type="Texture" id=2]
@@ -6,9 +6,12 @@
 [ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interactables/Readable/Prova/ReadableProva.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Interactables/Readable/Monitores/MeLivra.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_computador.mp3" type="AudioStream" id=7]
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Rooms/Lab257/Wall0/frase.png" type="Texture" id=9]
 [ext_resource path="res://Rooms/Lab257/Wall0/MeLivra.png" type="Texture" id=10]
+[ext_resource path="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_quadro_bug.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_prova.mp3" type="AudioStream" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 5 )
@@ -55,6 +58,7 @@ shape = SubResource( 3 )
 [node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 8 )]
 position = Vector2( 90, 115 )
 nome = "Computador"
+audio = ExtResource( 7 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
 polygon = PoolVector2Array( -16, -1, -16, -12, 18, -12, 18, 2, 10, 14, -22, 13, -16, 5 )
@@ -62,6 +66,7 @@ polygon = PoolVector2Array( -16, -1, -16, -12, 18, -12, 18, 2, 10, 14, -22, 13, 
 [node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 8 )]
 position = Vector2( 136, 114 )
 nome = "Computador"
+audio = ExtResource( 7 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
 polygon = PoolVector2Array( -15, 1, -15, -12, 20, -12, 20, 7, 10, 16, -14, 15 )
@@ -69,6 +74,7 @@ polygon = PoolVector2Array( -15, 1, -15, -12, 20, -12, 20, 7, 10, 16, -14, 15 )
 [node name="HoverInfo3" parent="HoverInfos" index="2" instance=ExtResource( 8 )]
 position = Vector2( 186, 114 )
 nome = "Computador"
+audio = ExtResource( 7 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
 polygon = PoolVector2Array( -18, 2, -18, -11, 18, -12, 18, 9, 14, 16, -14, 15 )
@@ -76,6 +82,7 @@ polygon = PoolVector2Array( -18, 2, -18, -11, 18, -12, 18, 9, 14, 16, -14, 15 )
 [node name="HoverInfo4" parent="HoverInfos" index="3" instance=ExtResource( 8 )]
 position = Vector2( 160, 63 )
 nome = "Quadro branco"
+audio = ExtResource( 11 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo4" index="0"]
 polygon = PoolVector2Array( -88, 33, -88, -37, 89, -37, 89, 36 )
@@ -83,6 +90,7 @@ polygon = PoolVector2Array( -88, 33, -88, -37, 89, -37, 89, 36 )
 [node name="HoverInfo5" parent="HoverInfos" index="4" instance=ExtResource( 8 )]
 position = Vector2( 112, 124 )
 nome = "Prova"
+audio = ExtResource( 12 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo5" index="0"]
 polygon = PoolVector2Array( -6, 2, -2, -4, 6, -3, 2, 5, -6, 4 )
