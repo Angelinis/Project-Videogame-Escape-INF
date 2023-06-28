@@ -16,3 +16,4 @@ func complete():
 	print("LOG: Puzzle ConnectPath concluído.")
 	
 	ProgressManager.anxiety -= 25
+

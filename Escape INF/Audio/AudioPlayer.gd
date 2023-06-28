@@ -9,7 +9,8 @@ onready var music_playing = false
 var audioQueue := []
 
 func _ready(): # Ajusta o volume antes de iniciar o jogo
-	AudioServer.set_bus_volume_db(music_bus, linear2db(0.3))
+#	AudioServer.set_bus_volume_db(music_bus, linear2db(0.3))
+	AudioServer.set_bus_volume_db(music_bus, linear2db(0.0)) #Just while programming
 	AudioServer.set_bus_volume_db(sound_bus, linear2db(0.4))
 	AudioServer.set_bus_volume_db(menu_speech_bus, linear2db(0.6))
 	AudioServer.set_bus_volume_db(character_speech_bus, linear2db(0.6))
