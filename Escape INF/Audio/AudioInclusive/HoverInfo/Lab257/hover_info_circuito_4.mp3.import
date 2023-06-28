@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hover_info_circuito_4.mp3-bb7e0b21de53efbf763fbb1b9addba96.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_circuito_4.mp3"
+dest_files=[ "res://.import/hover_info_circuito_4.mp3-bb7e0b21de53efbf763fbb1b9addba96.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
