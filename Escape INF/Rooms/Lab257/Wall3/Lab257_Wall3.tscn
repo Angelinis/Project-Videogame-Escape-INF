@@ -57,27 +57,29 @@ texture = ExtResource( 5 )
 position = Vector2( 0.5, 0.5 )
 shape = SubResource( 1 )
 
-[node name="HoverInfo" parent="." index="4" instance=ExtResource( 8 )]
+[node name="HoverInfos" type="Node2D" parent="." index="4"]
+
+[node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 8 )]
 position = Vector2( 111, 79 )
 nome = "Chave do Laboratório 257"
 audio = ExtResource( 9 )
-collectable_path = NodePath("../Chave257")
+collectable_path = NodePath("../../Chave257")
 
-[node name="CollisionShape2D" parent="HoverInfo" index="0"]
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
 position = Vector2( 7, 11 )
 polygon = PoolVector2Array( -8, 4, -8, -3, 9, -3, 9, 4 )
 
-[node name="HoverInfo2" parent="." index="5" instance=ExtResource( 8 )]
+[node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 8 )]
 position = Vector2( 222, 74 )
 nome = "Mini caixa"
 audio = ExtResource( 10 )
 
-[node name="CollisionShape2D" parent="HoverInfo2" index="0"]
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
 position = Vector2( 8, 9 )
 polygon = PoolVector2Array( -10, 8, -10, -11, 8, -11, 8, 9, -10, 9 )
 
 [editable path="PuzzleArea2"]
 [editable path="PuzzleArea"]
 [editable path="Chave257"]
-[editable path="HoverInfo"]
-[editable path="HoverInfo2"]
+[editable path="HoverInfos/HoverInfo"]
+[editable path="HoverInfos/HoverInfo2"]

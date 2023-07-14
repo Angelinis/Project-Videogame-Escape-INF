@@ -36,12 +36,14 @@ goto = "res://Rooms/PlantaBaixa/PlantaBaixa.tscn"
 position = Vector2( 0, 4 )
 shape = SubResource( 1 )
 
-[node name="HoverInfo" parent="." index="2" instance=ExtResource( 5 )]
+[node name="HoverInfos" type="Node2D" parent="." index="2"]
+
+[node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 5 )]
 position = Vector2( 222, 100 )
 nome = "Porta do Laboratório 257"
 audio = ExtResource( 11 )
 
-[node name="CollisionShape2D" parent="HoverInfo" index="0"]
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
 polygon = PoolVector2Array( -29, 52, -29, -44, 29, -44, 29, 52 )
 
 [node name="ReadableArea2" parent="." index="3" instance=ExtResource( 7 )]
@@ -74,7 +76,7 @@ position = Vector2( 222.5, 104.5 )
 shape = SubResource( 3 )
 
 [editable path="Door"]
-[editable path="HoverInfo"]
+[editable path="HoverInfos/HoverInfo"]
 [editable path="ReadableArea2"]
 [editable path="ReadableArea3"]
 [editable path="BlockProgress"]
