@@ -6,6 +6,9 @@ signal rightEmitted
 signal leftEmitted
 
 var selectedOption = 1
+var audioSlider
+
+const TRIAL_AUDIO = preload("res://Interface/TextBox/CharSFX.wav")
 
 var SOUNDMENU1 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_menu_retomar.mp3")
 var SOUNDMENU2 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_menu_efeitos_sonoros.mp3")
@@ -75,18 +78,37 @@ func adjustSelectedOption():
 		var button = $VBoxContainer.get_child(i)
 		
 		if i == selectedOption:
+			if $VBoxContainer.get_child(i).get_node("SoundSlider"):
+				audioSlider = $VBoxContainer.get_child(i).get_node("SoundSlider")
+			else:
+				audioSlider = null
 			button.add_color_override("font_color", Color(1, 1, 1))
+			AudioPlayer.stop_all_audios_bus("MenuSpeech")
 			AudioPlayer.play_one_shot(SOUNDARRAY[i-1], "MenuSpeech") 
 		else:
 			button.add_color_override("font_color", Color(0.5, 0.5, 0.5))
 			
 func onRightEmitted():
 	rightKeyPressed = true
-	AudioPlayer.play_one_shot(SOUNDMENU8, "MenuSpeech") 
+	if audioSlider == null :
+		return ""
+	else: 
+		audioSlider.value += 0.1 
+#		AudioPlayer.stop_all_audios_bus(audioSlider.audio_bus_name)
+		AudioPlayer.play_one_shot(TRIAL_AUDIO, audioSlider.audio_bus_name)
+		if audioSlider.value > 1.0:
+			audioSlider.value = 1.0
+
 
 func onLeftEmitted():
 	leftKeyPressed = true
-	AudioPlayer.play_one_shot(SOUNDMENU8, "MenuSpeech") 
+	if audioSlider == null :
+		return ""
+	else: 
+		audioSlider.value -= 0.1  
+		AudioPlayer.play_one_shot(TRIAL_AUDIO, audioSlider.audio_bus_name)
+		if audioSlider.value < 0.0:
+			audioSlider.value = 0.0
 
 
 func handleSelectedOption():

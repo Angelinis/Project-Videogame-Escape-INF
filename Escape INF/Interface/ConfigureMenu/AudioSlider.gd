@@ -6,8 +6,8 @@ onready var _bus := AudioServer.get_bus_index(audio_bus_name)
 
 func _ready():
 	value = db2linear(AudioServer.get_bus_volume_db(_bus))	
-	for i in AudioServer.get_bus_count():
-		print(AudioServer.get_bus_name(i))
+#	for i in AudioServer.get_bus_count():
+#		print(AudioServer.get_bus_name(i))
 	
 
 func _on_SoundSlider_value_changed(value: float):
