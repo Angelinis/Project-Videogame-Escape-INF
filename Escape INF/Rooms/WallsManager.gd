@@ -38,6 +38,26 @@ func _input(event):
 			if selected_hover_info.audio:
 				AudioPlayer.stop_all_audios_bus("MenuSpeech")
 				AudioPlayer.play_one_shot(selected_hover_info.audio, "MenuSpeech") 
+				
+				
+		elif event.pressed and event.scancode == KEY_ENTER:
+			if selected_hover_info:
+				# Get the reference to the bottom Area2D node
+				var overlappingAreas = selected_hover_info.get_overlapping_areas()
+				for area in overlappingAreas:
+					if area != selected_hover_info:
+						# Create a new mouse button event
+						var clickEvent = InputEventMouseButton.new()
+						clickEvent.button_index = BUTTON_LEFT
+						clickEvent.pressed = true
+						# Set the global position of the click event to the overlapping Area2D's position
+						clickEvent.global_position = area.global_position
+
+						# Emit the input event to the overlapping Area2D node
+						area.input_event(clickEvent)
+						
+						# Exit the loop after emulating the click
+						break
 
 
 func set_current_wall(wall_index):
