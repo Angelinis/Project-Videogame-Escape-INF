@@ -27,6 +27,7 @@ func show_texts(_texts, _audios=[]):
 	else: 
 		_show_text(texts[text_count], audios[text_count])
 
+
 func _show_text(_text, _audio = false):
 	self.done = false
 	icon.hide()
@@ -36,7 +37,8 @@ func _show_text(_text, _audio = false):
 	timer.start(time)
 	if (_audio):
 		AudioPlayer.stop_all_audios_bus("CharacterSpeech")
-		AudioPlayer.play_audio(_audio, "CharacterSpeech")
+		AudioPlayer.play_audios([_audio, PROCCEED_AUDIO], "CharacterSpeech")
+#		AudioPlayer.play_audio(_audio, "CharacterSpeech")
 
 
 func _input(event):
@@ -53,6 +55,7 @@ func _input(event):
 							_show_text(texts[text_count],audios[text_count])
 						else: 
 							_show_text(texts[text_count])
+							
 					else:
 						hide()
 						AudioPlayer.play_audio(PROCCEED_AUDIO, "Sound")
@@ -75,16 +78,17 @@ func _input(event):
 							_show_text(texts[text_count])
 					else:
 						hide()
-						AudioPlayer.play_audio(PROCCEED_AUDIO, "Sound")
+#						AudioPlayer.play_audio(PROCCEED_AUDIO, "Sound")
 						emit_signal("texts_done")
 						
 
 func _on_Timer_timeout():
 	if not done:
 		textLabel.visible_characters += 1
-		AudioPlayer.play_audio(CHAR_AUDIO, "Sound")
+		# AudioPlayer.play_audio(CHAR_AUDIO, "Sound")
 		if textLabel.visible_characters == textLabel.get_total_character_count():
 			self.done = true
+#			AudioPlayer.play_audio(PROCCEED_AUDIO, "Sound")
 
 func setDone(value):
 	done = value
