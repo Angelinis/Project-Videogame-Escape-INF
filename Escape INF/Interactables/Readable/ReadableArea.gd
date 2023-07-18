@@ -2,9 +2,7 @@ extends Area2D
 
 export (PackedScene) var readable_scene
 
-#	signal readable_open_changed(is_open)
-#	var readable_open
-
+export (bool) var readable_opened = false
 
 var _hovering = false
 
@@ -27,8 +25,6 @@ func handle_emulated_input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 		AudioPlayer.play_audio(preload("res://Audio/SFX/paper.wav"), "Sound")
 		get_tree().get_current_scene().add_child(readable_scene.instance())
-#		readable_open = true
-#		emit_signal("readable_open_changed", readable_open)
 		get_tree().set_input_as_handled()
 
 

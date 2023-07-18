@@ -10,22 +10,13 @@ var total_number_hover_info
 
 var index_hover_info := 0
 
-# Connecting the readable script with the walls manager
-#onready var readable_script = load("res://path_to_the_readable_script/ReadableScript.gd")
-
-# Adding variable for the readable
-#var is_open = false
+var window_open = false
 
 onready var walls := get_children()
 
 # Changing the open_state of a readable
-#func _on_readable_open_changed(is_open_state):
-#	is_open = is_open_state
-
 func _ready():
-	# Connecting the readable script with the walls manager
-#	readable_script.connect("readable_open_changed", self, "_on_readable_open_changed")
-	
+
 	if ProgressManager.previous_wall_index != null:
 		if walls.size() >= ProgressManager.previous_wall_index + 1:
 			current_wall_index = ProgressManager.previous_wall_index
@@ -42,9 +33,9 @@ func _ready():
 func _input(event):
 	if event is InputEventKey:
 				
-#		if is_open:
-#			return  # You can add additional handling or just leave it empty
-#		else:
+		if window_open:
+			return  # You can add additional handling or just leave it empty
+		else:
 			if event.scancode == KEY_TAB and event.pressed:
 				selected_hover_info = selected_scene.get_node("HoverInfos").get_child(index_hover_info)
 				if selected_hover_info.audio:
@@ -72,6 +63,11 @@ func _input(event):
 						custom_event.position = Vector2.ZERO
 						# Call the handle_emulated_input function in the bottom script and pass the custom event
 						bottom_area.handle_emulated_input(custom_event)
+						
+						if !bottom_area.readable_opened:
+							bottom_area.readable_opened = true
+							window_open = true
+							
 
 
 func set_current_wall(wall_index):
