@@ -32,6 +32,7 @@ shape = SubResource( 1 )
 [node name="HoverInfo3" parent="HoverInfos" index="0" instance=ExtResource( 5 )]
 nome = "Caixa de energia"
 audio = ExtResource( 6 )
+bottom_area_path = "PuzzleArea"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
 polygon = PoolVector2Array( 137, 117, 137, 75, 175, 75, 175, 117 )

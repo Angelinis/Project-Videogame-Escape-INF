@@ -136,5 +136,7 @@ func _on_MainMenuButton_pressed():
 
 # Connect signals to corresponding functions
 func _ready():
+# warning-ignore:return_value_discarded
 	connect("rightEmitted", self, "onRightEmitted")
+# warning-ignore:return_value_discarded
 	connect("leftEmitted", self, "onLeftEmitted")

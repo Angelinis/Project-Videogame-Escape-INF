@@ -59,6 +59,7 @@ shape = SubResource( 3 )
 position = Vector2( 90, 115 )
 nome = "Computador"
 audio = ExtResource( 7 )
+bottom_area_path = "ReadableArea3"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
 polygon = PoolVector2Array( -16, -1, -16, -12, 18, -12, 18, 2, 10, 14, -22, 13, -16, 5 )
@@ -91,6 +92,7 @@ polygon = PoolVector2Array( -88, 33, -88, -37, 89, -37, 89, 36 )
 position = Vector2( 112, 124 )
 nome = "Prova"
 audio = ExtResource( 12 )
+bottom_area_path = "ReadableArea"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo5" index="0"]
 polygon = PoolVector2Array( -6, 2, -2, -4, 6, -3, 2, 5, -6, 4 )

@@ -6,6 +6,8 @@ export(Resource) var audio
 
 export(NodePath) var collectable_path
 
+export(String) var bottom_area_path
+
 onready var label = get_tree().current_scene.get_node("UI Layer/UI/HoverInfoLabel")
 
 

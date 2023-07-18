@@ -12,6 +12,18 @@ var _hovering = false
 onready var area_collision = $CollisionShape2D
 onready var sprite = $Sprite
 
+func handle_emulated_input(event):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
+		Input.set_default_cursor_shape(0)
+		get_tree().set_input_as_handled()
+		if item_needed:
+			if Inventory.get_selected_item() == item_needed:
+				interact()
+			else:
+				TextBox.show_texts([needed_text])
+		else:
+			interact()
+
 func _ready():
 	var room_file = get_tree().current_scene.filename
 	var wall_name = get_parent().name
@@ -28,6 +40,8 @@ func _on_PuzzleArea_mouse_entered():
 func _on_PuzzleArea_mouse_exited():
 	_hovering = false
 	Input.set_default_cursor_shape(0)
+
+
 
 func _input(event):
 	if _hovering:
