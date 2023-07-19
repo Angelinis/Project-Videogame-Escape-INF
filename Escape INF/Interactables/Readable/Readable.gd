@@ -2,12 +2,16 @@ extends Control
 
 export (Array, String) var texts
 
+export(Array, Resource) var audio
+
 var _hovering = false
 
 func _ready():
 	get_parent().layer = 1
 	Blur.unfocus_blur()
-	if not texts.empty():
+	if not audio.empty():
+		TextBox.show_texts(texts, audio)
+	elif not texts.empty():
 		TextBox.show_texts(texts)
 
 func _on_Content_mouse_entered():

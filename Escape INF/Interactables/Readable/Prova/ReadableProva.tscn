@@ -1,13 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Interactables/Readable/Prova/provaRespostas.png" type="Texture" id=1]
 [ext_resource path="res://Interactables/Readable/Readable.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Audio/AudioInclusive/Readable/readable_scene_prova.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Audio/AudioInclusive/Readable/readable_scene_prova_descricao.mp3" type="AudioStream" id=4]
 
 [node name="ReadableProva" instance=ExtResource( 2 )]
 layer = 0
 
 [node name="Readable" parent="." index="0"]
-texts = [ "Alguém esqueceu uma prova aqui." ]
+texts = [ "Alguém esqueceu uma prova aqui.", "Parece uma prova de Cálculo." ]
+audio = [ ExtResource( 3 ), ExtResource( 4 ) ]
 
 [node name="Title1" type="Label" parent="Readable/Content" index="1"]
 anchor_right = 1.0

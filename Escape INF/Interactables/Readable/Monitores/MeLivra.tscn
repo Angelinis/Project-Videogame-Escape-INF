@@ -1,8 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Interactables/Readable/Readable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Audio/AudioInclusive/Readable/readable_scene_me_livra.mp3" type="AudioStream" id=2]
 [ext_resource path="res://Interactables/Readable/Monitores/MonitorMeLivra2.png" type="Texture" id=3]
-
+[ext_resource path="res://Audio/AudioInclusive/Readable/readable_scene_me_livra_descricao.mp3" type="AudioStream" id=4]
 
 [node name="Melivra" instance=ExtResource( 1 )]
 __meta__ = {
@@ -10,7 +11,8 @@ __meta__ = {
 }
 
 [node name="Readable" parent="." index="0"]
-texts = [ "Opa! Vou guardar essa informação para o futuro." ]
+texts = [ "Opa! Vou guardar essa informação para o futuro.", "Muitos comentarios positivos da professora!" ]
+audio = [ ExtResource( 2 ), ExtResource( 4 ) ]
 
 [node name="Content" parent="Readable" index="0"]
 margin_left = -143.0

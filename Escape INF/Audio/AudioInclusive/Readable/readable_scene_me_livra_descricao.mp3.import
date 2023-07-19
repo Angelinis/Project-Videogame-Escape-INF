@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/readable_scene_me_livra_descricao.mp3-1c2ebeb51b84032e8b36e3dba2c767e8.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Readable/readable_scene_me_livra_descricao.mp3"
+dest_files=[ "res://.import/readable_scene_me_livra_descricao.mp3-1c2ebeb51b84032e8b36e3dba2c767e8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -10,6 +10,8 @@ var total_number_hover_info
 
 var index_hover_info := 0
 
+var bottom_area
+
 var window_open = false
 
 onready var walls := get_children()
@@ -34,7 +36,10 @@ func _input(event):
 	if event is InputEventKey:
 				
 		if window_open:
-			return  # You can add additional handling or just leave it empty
+			if event.scancode == KEY_BACKSPACE and event.pressed:
+				if bottom_area and bottom_area.has_method("handle_emulated_input"):
+					bottom_area.handle_emulated_input()
+					window_open = false
 		else:
 			if event.scancode == KEY_TAB and event.pressed:
 				selected_hover_info = selected_scene.get_node("HoverInfos").get_child(index_hover_info)
@@ -45,29 +50,26 @@ func _input(event):
 					index_hover_info = 0
 				else: 
 					index_hover_info += 1
-
-					
 					
 			elif event.pressed and event.scancode == KEY_ENTER:
 				if selected_hover_info:
 					var path_info = selected_hover_info.bottom_area_path
 					if path_info=="":
 						return					
-					var bottom_area = selected_scene.get_node(path_info)
-		# Check if the bottom_area exists and has the handle_emulated_input function
+					bottom_area = selected_scene.get_node(path_info)
 					if bottom_area and bottom_area.has_method("handle_emulated_input"):
 						# Manually create a custom InputEventMouseButton event to trigger the handle_emulated_input function
-						var custom_event = InputEventMouseButton.new()
-						custom_event.button_index = BUTTON_LEFT
-						custom_event.pressed = true
-						custom_event.position = Vector2.ZERO
-						# Call the handle_emulated_input function in the bottom script and pass the custom event
-						bottom_area.handle_emulated_input(custom_event)
-						
-						if !bottom_area.readable_opened:
-							bottom_area.readable_opened = true
-							window_open = true
-							
+#						var custom_event = InputEventMouseButton.new()
+#						custom_event.button_index = BUTTON_LEFT
+#						custom_event.pressed = true
+#						custom_event.position = Vector2.ZERO
+						bottom_area.handle_emulated_input()
+						if "readable_opened" in bottom_area:
+							if !bottom_area.readable_opened:
+								bottom_area.readable_opened = true
+								window_open = true
+						else:
+							return
 
 
 func set_current_wall(wall_index):

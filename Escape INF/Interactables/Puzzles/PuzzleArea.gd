@@ -12,8 +12,8 @@ var _hovering = false
 onready var area_collision = $CollisionShape2D
 onready var sprite = $Sprite
 
-func handle_emulated_input(event):
-	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
+func handle_emulated_input():
+#	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 		Input.set_default_cursor_shape(0)
 		get_tree().set_input_as_handled()
 		if item_needed:
