@@ -70,6 +70,9 @@ func _input(event):
 				if not done:
 					self.done = true
 				elif done:
+					#Stops the CharacterSpeech when pressing ENTER
+					AudioPlayer.stop_all_audios_bus("CharacterSpeech")
+					
 					if text_count < texts.size() - 1:
 						text_count += 1
 						if audios:
