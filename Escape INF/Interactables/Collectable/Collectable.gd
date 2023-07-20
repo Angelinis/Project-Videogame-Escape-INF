@@ -30,6 +30,10 @@ func _input(event):
 			collect()
 			get_tree().set_input_as_handled()
 
+func handle_emulated_input():
+	collect()
+	get_tree().set_input_as_handled()
+
 func collect():
 		print("ITEM:" + item_data.name + " coletado!")
 		TextBox.show_texts(["Você colocou " + item_data.name + " na sua mochila."])

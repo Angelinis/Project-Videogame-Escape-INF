@@ -15,6 +15,7 @@ var _hovering = false
 
 onready var slotsGrid := $HBoxContainer/GridContainer
 onready var itemDescription := $HBoxContainer/ItemDescription
+onready var walls_manager = get_tree().get_current_scene().get_node("Walls")
 
 signal selected_item_changed
 
@@ -46,10 +47,13 @@ func _input(event):
 				inventoryRect.visible = true
 				AudioPlayer.play_audio(BACKPACK_OPEN, "UISound")
 				Blur.unfocus_blur()
+				walls_manager.window_open = true
+				
 			elif event.pressed and inventoryRect.visible:
 				inventoryRect.visible = false
 				AudioPlayer.play_audio(BACKPACK_CLOSED, "UISound")
 				Blur.visible = false
+				walls_manager.window_open = false
 			#emit_signal("inventory_visibility_changed", inventoryRect.visible)  # Emit the signal
 						
 	if event is InputEventMouseButton:

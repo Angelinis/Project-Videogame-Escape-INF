@@ -64,6 +64,7 @@ position = Vector2( 111, 79 )
 nome = "Chave do Laboratório 257"
 audio = ExtResource( 9 )
 collectable_path = NodePath("../../Chave257")
+bottom_area_path = "Chave257"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
 position = Vector2( 7, 11 )
@@ -73,6 +74,7 @@ polygon = PoolVector2Array( -8, 4, -8, -3, 9, -3, 9, 4 )
 position = Vector2( 222, 74 )
 nome = "Mini caixa"
 audio = ExtResource( 10 )
+bottom_area_path = "PuzzleArea"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
 position = Vector2( 8, 9 )

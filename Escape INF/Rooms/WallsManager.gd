@@ -64,6 +64,13 @@ func _input(event):
 #						custom_event.pressed = true
 #						custom_event.position = Vector2.ZERO
 						bottom_area.handle_emulated_input()
+						
+						if "item_data" in bottom_area:
+							selected_scene.get_node("HoverInfos").remove_child(selected_hover_info)
+							total_number_hover_info = selected_scene.get_node("HoverInfos").get_child_count()
+							index_hover_info = 0
+							selected_hover_info = null
+
 						if "readable_opened" in bottom_area:
 							if !bottom_area.readable_opened:
 								bottom_area.readable_opened = true
