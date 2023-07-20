@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/readable_scene_folha_papel.mp3-686843a951859ba5a3c43f3605048a0f.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Readable/readable_scene_folha_papel.mp3"
+dest_files=[ "res://.import/readable_scene_folha_papel.mp3-686843a951859ba5a3c43f3605048a0f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
