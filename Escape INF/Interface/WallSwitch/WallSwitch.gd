@@ -17,7 +17,7 @@ func _on_RightButtonRect_gui_input(event):
 				walls_manager.current_wall_index += 1
 
 func _input(event):
-	if event is InputEventKey:
+	if event is InputEventKey and walls_manager.window_open == false:
 		if event.scancode == KEY_LEFT and event.pressed:
 			walls_manager.current_wall_index -= 1
 			AudioPlayer.play_audio(CHANGE_VIEW_SOUND, "UISound")

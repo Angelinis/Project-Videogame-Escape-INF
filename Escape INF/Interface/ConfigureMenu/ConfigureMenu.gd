@@ -19,7 +19,7 @@ var SOUNDMENU6 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_men
 var SOUNDMENU7 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_menu_menu_principal.mp3")
 var SOUNDARRAY = [SOUNDMENU1, SOUNDMENU2, SOUNDMENU3, SOUNDMENU4, SOUNDMENU5, SOUNDMENU6, SOUNDMENU7]
 var SOUNDMENU8 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_menu_increase_decrease_sound.mp3")
-
+var SOUNDMENU9 = preload("res://Audio/AudioInclusive/ConfigureMenu/configure_menu_configuracoes_iniciacao.mp3")
 
 const MAIN_MENU_PATH = "res://Interface/MainMenu/MainMenu.tscn"
 
@@ -41,10 +41,14 @@ func _on_Resume_pressed():
 func _input(event):
 	if event is InputEventKey:
 		if event.pressed and event.scancode == KEY_SPACE and pause == false:
+			print("here")
 			pause = true
 			show()
 			Blur.unfocus_blur()
 			get_tree().paused = true
+			#Play an audio when opening the configuration menu
+			AudioPlayer.stop_all_audios_bus("MenuSpeech")
+			AudioPlayer.play_one_shot(SOUNDMENU9, "MenuSpeech")
 		elif event.pressed and event.scancode == KEY_SPACE and pause == true:
 			hide()
 			Blur.visible = false
@@ -78,7 +82,7 @@ func adjustSelectedOption():
 		var button = $VBoxContainer.get_child(i)
 		
 		if i == selectedOption:
-			if $VBoxContainer.get_child(i).get_node("SoundSlider"):
+			if $VBoxContainer.get_child(i).has_node("SoundSlider"):
 				audioSlider = $VBoxContainer.get_child(i).get_node("SoundSlider")
 			else:
 				audioSlider = null

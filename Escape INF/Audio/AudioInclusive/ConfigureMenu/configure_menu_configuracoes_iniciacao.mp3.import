@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/configure_menu_configuracoes_iniciacao.mp3-5e7a49e7fe9225ec1d6a245cba5ac3ad.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/ConfigureMenu/configure_menu_configuracoes_iniciacao.mp3"
+dest_files=[ "res://.import/configure_menu_configuracoes_iniciacao.mp3-5e7a49e7fe9225ec1d6a245cba5ac3ad.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

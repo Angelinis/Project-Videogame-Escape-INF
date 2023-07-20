@@ -12,7 +12,7 @@ var index_hover_info := 0
 
 var bottom_area
 
-var window_open = false
+var window_open := false
 
 onready var walls := get_children()
 
