@@ -72,6 +72,7 @@ func _input(event):
 				get_tree().set_input_as_handled()
 				if not done:
 					self.done = true
+					showing = true
 				elif done:
 					#Stops the CharacterSpeech when pressing ENTER
 					AudioPlayer.stop_all_audios_bus("CharacterSpeech")

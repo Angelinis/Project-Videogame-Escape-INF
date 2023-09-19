@@ -40,6 +40,7 @@ func _input(event):
 				if bottom_area and bottom_area.has_method("handle_emulated_input"):
 					bottom_area.handle_emulated_input()
 					window_open = false
+
 		else:
 			if event.scancode == KEY_TAB and event.pressed and TextBox.isTextShowing() == false:
 				selected_hover_info = selected_scene.get_node("HoverInfos").get_child(index_hover_info)
