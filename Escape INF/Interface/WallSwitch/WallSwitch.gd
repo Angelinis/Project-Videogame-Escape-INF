@@ -19,9 +19,13 @@ func _on_RightButtonRect_gui_input(event):
 func _input(event):
 	if event is InputEventKey and walls_manager.window_open == false:
 		if event.scancode == KEY_LEFT and event.pressed:
+			AudioPlayer.stop_all_audios_bus("CharacterSpeech")
+			AudioPlayer.stop_all_audios_bus("MenuSpeech")
 			walls_manager.current_wall_index -= 1
 			AudioPlayer.play_audio(CHANGE_VIEW_SOUND, "UISound")
 		elif event.scancode == KEY_RIGHT and event.pressed:
+			AudioPlayer.stop_all_audios_bus("CharacterSpeech")
+			AudioPlayer.stop_all_audios_bus("MenuSpeech")
 			walls_manager.current_wall_index += 1
 			AudioPlayer.play_audio(CHANGE_VIEW_SOUND, "UISound")
 		if event.scancode == KEY_L and event.pressed:
