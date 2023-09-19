@@ -8,6 +8,7 @@ const PROCCEED_AUDIO = preload("res://Interface/TextBox/ProcceedSFX.wav")
 var texts: Array
 var audios: Array
 var text_count = 0
+var showing:= true
 
 var done := true setget setDone
 
@@ -30,6 +31,7 @@ func show_texts(_texts, _audios=[]):
 
 func _show_text(_text, _audio = false):
 	self.done = false
+	showing = true
 	icon.hide()
 	
 	textLabel.text = _text
@@ -60,6 +62,7 @@ func _input(event):
 						hide()
 						AudioPlayer.play_audio(PROCCEED_AUDIO, "Sound")
 						emit_signal("texts_done")
+						
 
 #Adding Input Listener for Enter to Change Text						
 						
@@ -81,6 +84,7 @@ func _input(event):
 							_show_text(texts[text_count])
 					else:
 						hide()
+						showing = false
 #						AudioPlayer.play_audio(PROCCEED_AUDIO, "Sound")
 						emit_signal("texts_done")
 						
@@ -98,3 +102,6 @@ func setDone(value):
 	if done:
 		textLabel.visible_characters = textLabel.get_total_character_count()
 		icon.show()
+		
+func isTextShowing():
+	return showing
