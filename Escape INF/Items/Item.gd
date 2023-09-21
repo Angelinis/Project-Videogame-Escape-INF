@@ -6,3 +6,5 @@ export(String) var name: String
 export(Texture) var sprite: Texture
 
 export(String, MULTILINE) var description: String
+
+export(Resource) var audio: Resource

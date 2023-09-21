@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/celular_tres.mp3-1719bda6fa49b629783dc2acac9c9dfc.mp3str"
+
+[deps]
+
+source_file="res://Items/Celular/celular_tres.mp3"
+dest_files=[ "res://.import/celular_tres.mp3-1719bda6fa49b629783dc2acac9c9dfc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -7,6 +7,8 @@ const BACKPACK_CLOSED = preload("res://Audio/AudioInclusive/UI/ui_backpack_close
 const BACKPACK_OPEN = preload("res://Audio/AudioInclusive/UI/ui_backpack_open.mp3")
 
 
+var simulated_index_hover_info := 0
+var total_items
 
 var hovering_slot_index = null
 var selected_slot_index = null setget select_slot
@@ -55,6 +57,31 @@ func _input(event):
 				Blur.visible = false
 				walls_manager.window_open = false
 			#emit_signal("inventory_visibility_changed", inventoryRect.visible)  # Emit the signal
+			
+		if event.scancode == KEY_TAB:
+			var inventoryRect = get_parent()
+			total_items = auxiliar_count_NonNullValues(Inventory.items) 
+			if event.pressed and inventoryRect.visible:
+				AudioPlayer.stop_all_audios_bus("MenuSpeech")
+				AudioPlayer.play_one_shot(Inventory.items[simulated_index_hover_info].audio, "MenuSpeech") 
+				if simulated_index_hover_info + 1  == total_items:
+					simulated_index_hover_info = 0
+				else:
+					simulated_index_hover_info += 1
+					
+		if event.scancode == KEY_ENTER:
+			var inventoryRect = get_parent()
+			if event.pressed and inventoryRect.visible:
+				if simulated_index_hover_info == 0:
+					selected_slot_index = total_items - 1
+					select_slot(selected_slot_index)
+				else:
+					selected_slot_index = simulated_index_hover_info - 1
+					select_slot(selected_slot_index)
+
+				
+			
+
 						
 	if event is InputEventMouseButton:
 		
@@ -118,3 +145,12 @@ func _on_InventoryRect_mouse_entered():
 
 func _on_InventoryRect_mouse_exited():
 	_hovering = false
+	
+func auxiliar_count_NonNullValues(arr: Array) -> int:
+	var count = 0
+
+	for value in arr:
+		if value != null:
+			count += 1
+
+	return count	

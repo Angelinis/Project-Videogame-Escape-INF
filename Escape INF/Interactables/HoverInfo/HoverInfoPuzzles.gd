@@ -10,5 +10,5 @@ func _on_HoverInfoPuzzles_mouse_entered():
 
 		AudioPlayer.stop_all_audios_bus("MenuSpeech")
 		AudioPlayer.play_one_shot(audio, "MenuSpeech") 
-		print("here")
+
 	
