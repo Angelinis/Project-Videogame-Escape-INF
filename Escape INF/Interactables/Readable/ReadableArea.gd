@@ -2,7 +2,7 @@ extends Area2D
 
 export (PackedScene) var readable_scene
 
-export (bool) var readable_opened = false
+#export (bool) var readable_opened = false
 
 var readable_instance
 
@@ -26,13 +26,15 @@ func _input(event):
 
 
 func handle_emulated_input():
-	if readable_opened == false:
+#	if readable_opened == false:
 #	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 		AudioPlayer.play_audio(preload("res://Audio/SFX/paper.wav"), "Sound")
 		readable_instance = readable_scene.instance()
+		
 		get_tree().get_current_scene().add_child(readable_instance)
-		readable_instance.set_parent_scene(get_tree().get_root())
 		get_tree().set_input_as_handled()
+		
+		
 #	elif readable_opened == true: 
 #		AudioPlayer.play_audio(preload("res://Audio/SFX/paper.wav"), "Sound")
 #		readable_instance.queue_free()

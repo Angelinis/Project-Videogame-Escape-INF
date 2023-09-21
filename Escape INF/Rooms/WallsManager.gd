@@ -72,10 +72,8 @@ func _input(event):
 							index_hover_info = 0
 							selected_hover_info = null
 
-						if "readable_opened" in bottom_area:
-							if !bottom_area.readable_opened:
-								bottom_area.readable_opened = true
-								window_open = true
+						if "readable_scene" in bottom_area:
+							window_open = true
 						else:
 							return
 
