@@ -18,7 +18,7 @@ onready var walls := get_children()
 
 # Changing the open_state of a readable
 func _ready():
-
+	index_hover_info = 0
 	if ProgressManager.previous_wall_index != null:
 		if walls.size() >= ProgressManager.previous_wall_index + 1:
 			current_wall_index = ProgressManager.previous_wall_index
@@ -44,6 +44,7 @@ func _input(event):
 		else:
 			if event.scancode == KEY_TAB and event.pressed and TextBox.isTextShowing() == false:
 				selected_hover_info = selected_scene.get_node("HoverInfos").get_child(index_hover_info)
+				total_number_hover_info = selected_scene.get_node("HoverInfos").get_child_count()
 				if selected_hover_info.audio:
 					AudioPlayer.stop_all_audios_bus("MenuSpeech")
 					AudioPlayer.play_one_shot(selected_hover_info.audio, "MenuSpeech") 

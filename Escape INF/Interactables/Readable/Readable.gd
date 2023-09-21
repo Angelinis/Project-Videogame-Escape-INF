@@ -18,7 +18,7 @@ func _ready():
 	elif not texts.empty():
 		TextBox.show_texts(texts)	
 		
-func _process(delta):
+func _process(_delta):
 	if TextBox.isTextShowing() == false:
 		AudioPlayer.play_audio(preload("res://Audio/SFX/paper_close.mp3"), "Sound")
 		queue_free()
