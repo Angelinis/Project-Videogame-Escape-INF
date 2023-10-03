@@ -5,7 +5,7 @@ const SELECTED_ITEM_PANEL = preload("res://Interface/InventoryRect/selectedItemP
 
 const BACKPACK_CLOSED = preload("res://Audio/AudioInclusive/UI/ui_backpack_closed.mp3")
 const BACKPACK_OPEN = preload("res://Audio/AudioInclusive/UI/ui_backpack_open.mp3")
-
+const SELECTED_ITEM = preload("res://Audio/AudioInclusive/Inventory/selected_item_sound.mp3")
 
 var simulated_index_hover_info := 0
 var total_items
@@ -53,6 +53,7 @@ func _input(event):
 				
 			elif event.pressed and inventoryRect.visible:
 				inventoryRect.visible = false
+				AudioPlayer.stop_all_audios_bus("MenuSpeech")
 				AudioPlayer.play_audio(BACKPACK_CLOSED, "UISound")
 				Blur.visible = false
 				walls_manager.window_open = false
@@ -75,9 +76,13 @@ func _input(event):
 				if simulated_index_hover_info == 0:
 					selected_slot_index = total_items - 1
 					select_slot(selected_slot_index)
+					AudioPlayer.stop_all_audios_bus("UISound")
+					AudioPlayer.play_one_shot(SELECTED_ITEM, "UISound") 
 				else:
 					selected_slot_index = simulated_index_hover_info - 1
 					select_slot(selected_slot_index)
+					AudioPlayer.stop_all_audios_bus("UISound")
+					AudioPlayer.play_one_shot(SELECTED_ITEM, "UISound") 
 
 				
 			

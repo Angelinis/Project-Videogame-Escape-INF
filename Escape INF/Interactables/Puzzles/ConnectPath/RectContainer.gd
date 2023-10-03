@@ -2,6 +2,7 @@ extends Control
 
 var completed = false
 var isMouseOverPanel = false
+var selected_index
 
 onready var panels = get_children()
 
@@ -26,6 +27,7 @@ var SOUNDARRAY = [SOUND1, SOUND2, SOUND3, SOUND4, SOUND5, SOUND6, SOUND7, SOUND1
 onready var destinyButton = $TextureRect8
 
 func _ready():
+	selected_index = 0
 	for i in panels.size():
 		panels[i].connect("gui_input", self, "_on_panel_gui_input", [i])
 		panels[i].connect("mouse_entered", self, "_on_panel_mouse_entered", [i])
@@ -40,19 +42,52 @@ func _on_panel_mouse_entered(index):
 func _on_panel_mouse_exited():
 	isMouseOverPanel = false
 
+func _input(event):
+	if not completed:
+			if event is InputEventKey:
+				if event.scancode == KEY_TAB and event.pressed:
+					
+					if selected_index + 1 >= panels.size():  
+						AudioPlayer.stop_all_audios_bus("MenuSpeech")
+						AudioPlayer.play_one_shot(SOUNDARRAY[selected_index], "MenuSpeech")	 
+						selected_index = 0
+					elif selected_index == 6 or selected_index == 11: 
+						AudioPlayer.stop_all_audios_bus("MenuSpeech")
+						AudioPlayer.play_one_shot(SOUNDARRAY[selected_index], "MenuSpeech")
+						selected_index += 2
+					else: 
+						AudioPlayer.stop_all_audios_bus("MenuSpeech")
+						AudioPlayer.play_one_shot(SOUNDARRAY[selected_index], "MenuSpeech")
+						selected_index += 1
+						
+					 
+					
+				elif event.scancode == KEY_ENTER and event.pressed:
+					# Handle Enter key pressed (change rotation)
+					if selected_index != 7 and selected_index != 12:
+						panels[selected_index].rect_rotation += 90
+						if panels[selected_index].rect_rotation > 270:
+							panels[selected_index].rect_rotation = 0
+							
+						if check_completion() == true:
+							destinyButton.texture = load("res://Interactables/Puzzles/ConnectPath/greenLight.png")
+							get_parent().complete()
+							completed = true
 		
 func _on_panel_gui_input(event, index):
 	if not completed and isMouseOverPanel:
 		if index != 7 and index != 12:
 			if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-				panels[index].rect_rotation += 90
-				if panels[index].rect_rotation > 270:
-					panels[index].rect_rotation = 0
-				
-				if check_completion() == true:
-					destinyButton.texture = load("res://Interactables/Puzzles/ConnectPath/greenLight.png")
-					get_parent().complete()
-					completed = true
+				# Handle left mouse button click (change rotation)
+				if index != 7 and index != 12:
+					panels[index].rect_rotation += 90
+					if panels[index].rect_rotation > 270:
+						panels[index].rect_rotation = 0
+						
+					if check_completion() == true:
+						destinyButton.texture = load("res://Interactables/Puzzles/ConnectPath/greenLight.png")
+						get_parent().complete()
+						completed = true
 					
 func randomize_rotations():
 	
