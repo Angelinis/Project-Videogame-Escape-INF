@@ -60,11 +60,13 @@ func _input(event):
 						AudioPlayer.play_one_shot(SOUNDARRAY[selected_index], "MenuSpeech")
 						selected_index += 1
 						
+						
 					 
 					
 				elif event.scancode == KEY_ENTER and event.pressed:
 					# Handle Enter key pressed (change rotation)
-					if selected_index != 7 and selected_index != 12:
+					if selected_index != 7 and selected_index != 12 and selected_index != 13 and selected_index != 1 and selected_index != 2 and selected_index != 4 and selected_index != 5 and selected_index != 8 and selected_index != 9 and selected_index != 0:
+						
 						panels[selected_index].rect_rotation += 90
 						if panels[selected_index].rect_rotation > 270:
 							panels[selected_index].rect_rotation = 0
@@ -96,7 +98,8 @@ func randomize_rotations():
 	var values = [0,90,180,270]
 	
 	for i in panels.size():
-		if i != 7 and i != 12:
+#		if i != 7 and i != 12:
+		if i != 7 and i != 12  and i != 13 and i != 0 and i != 1 and i != 2 and i != 4 and i != 5 and i != 8 and i != 9:
 			panels[i].rect_rotation = values[randi() % values.size()]
 
 func check_completion():
