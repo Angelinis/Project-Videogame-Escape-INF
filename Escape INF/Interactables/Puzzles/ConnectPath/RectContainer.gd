@@ -9,6 +9,8 @@ var available_index = [3, 6, 10, 11, 14, 15]
 
 onready var panels = get_children()
 
+const PUZZLE = preload("res://Audio/AudioInclusive/Interactable/Puzzles/change_puzzle_view.mp3")
+
 var SOUND1 = preload("res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_circuito_1.mp3")
 var SOUND2 = preload("res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_circuito_2.mp3")
 var SOUND3 = preload("res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_circuito_3.mp3")
@@ -71,9 +73,12 @@ func _input(event):
 					if selected_index != 7 and selected_index != 12 and selected_index != 13 and selected_index != 1 and selected_index != 2 and selected_index != 4 and selected_index != 5 and selected_index != 8 and selected_index != 9 and selected_index != 0:
 						
 						panels[selected_index].rect_rotation += 90
+						AudioPlayer.stop_all_audios_bus("UISound")
+						AudioPlayer.play_one_shot(PUZZLE, "UISound")
 						if panels[selected_index].rect_rotation > 270:
 							panels[selected_index].rect_rotation = 0
-							
+							AudioPlayer.stop_all_audios_bus("UISound")
+							AudioPlayer.play_one_shot(PUZZLE, "UISound")
 						if check_completion() == true:
 							destinyButton.texture = load("res://Interactables/Puzzles/ConnectPath/greenLight.png")
 							completed = true

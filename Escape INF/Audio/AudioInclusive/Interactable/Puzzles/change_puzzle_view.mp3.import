@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/change_puzzle_view.mp3-e9f5be52a359ffa36e66acc8150d183a.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Interactable/Puzzles/change_puzzle_view.mp3"
+dest_files=[ "res://.import/change_puzzle_view.mp3-e9f5be52a359ffa36e66acc8150d183a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

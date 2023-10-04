@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "chave do laboratório 256"
+name = "chave do laboratório 257"
 sprite = ExtResource( 2 )
 description = "A chave que abre a porta do laboratório 257."
 audio = ExtResource( 3 )
