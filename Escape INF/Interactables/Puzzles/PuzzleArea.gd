@@ -56,7 +56,12 @@ func _input(event):
 			else:
 				interact()
 func interact():
-	ProgressManager.previous_room = get_tree().current_scene.filename
-	ProgressManager.previous_wall_name = get_parent().name
-	ProgressManager.previous_wall_index = get_tree().current_scene.find_node("Walls").current_wall_index
-	var _a = get_tree().change_scene(puzzle_file)
+	var room_file = get_tree().current_scene.filename
+	var wall_name = get_parent().name
+	if ProgressManager.check_progress("completed_puzzles", room_file, wall_name, puzzle_file):
+		return
+	else :
+		ProgressManager.previous_room = get_tree().current_scene.filename
+		ProgressManager.previous_wall_name = get_parent().name
+		ProgressManager.previous_wall_index = get_tree().current_scene.find_node("Walls").current_wall_index
+		var _a = get_tree().change_scene(puzzle_file)

@@ -39,6 +39,7 @@ func _show_text(_text, _audio = false):
 	timer.start(time)
 	if (_audio):
 		AudioPlayer.stop_all_audios_bus("CharacterSpeech")
+		AudioPlayer.stop_all_audios_bus("MenuSpeech")
 		AudioPlayer.play_audios([_audio, PROCCEED_AUDIO], "CharacterSpeech")
 #		AudioPlayer.play_audio(_audio, "CharacterSpeech")
 

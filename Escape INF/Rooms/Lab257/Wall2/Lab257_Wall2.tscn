@@ -44,6 +44,7 @@ shape = SubResource( 1 )
 position = Vector2( 222, 100 )
 nome = "Porta do Laboratório 257"
 audio = ExtResource( 11 )
+bottom_area_path = "Door"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
 polygon = PoolVector2Array( -29, 52, -29, -44, 29, -44, 29, 52 )

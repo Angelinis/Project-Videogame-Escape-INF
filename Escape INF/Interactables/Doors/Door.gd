@@ -10,6 +10,11 @@ export(String, FILE, "*.tscn") var goto
 
 var _hovering = false
 
+func handle_emulated_input():
+		interact()
+		get_tree().set_input_as_handled()
+		
+
 func _ready():
 	var room_file = get_tree().current_scene.filename
 	var wall_name = get_parent().name

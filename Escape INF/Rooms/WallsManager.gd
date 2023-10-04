@@ -53,7 +53,7 @@ func _input(event):
 				else: 
 					index_hover_info += 1
 					
-			elif event.pressed and event.scancode == KEY_ENTER:
+			elif event.pressed and event.scancode == KEY_ENTER and TextBox.isTextShowing() == false:
 				if selected_hover_info:
 					var path_info = selected_hover_info.bottom_area_path
 					if path_info=="":

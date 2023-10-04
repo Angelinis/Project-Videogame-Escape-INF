@@ -14,6 +14,13 @@ func _on_BlockProgress_mouse_exited():
 	_hovering = false
 	Input.set_default_cursor_shape(0)
 
+func handle_emulated_input():
+	if needed_text == "Não consigo ver a fechadura com a luz apagada.":
+		TextBox.show_texts([needed_text],[SPEECH_1])
+	else:	
+		TextBox.show_texts([needed_text])
+	get_tree().set_input_as_handled()
+
 func _input(event):
 	if _hovering:
 		if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:

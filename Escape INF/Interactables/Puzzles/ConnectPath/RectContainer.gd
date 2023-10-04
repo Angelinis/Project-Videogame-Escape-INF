@@ -4,6 +4,9 @@ var completed = false
 var isMouseOverPanel = false
 var selected_index
 
+var available_selected_index
+var available_index = [3, 6, 10, 11, 14, 15]
+
 onready var panels = get_children()
 
 var SOUND1 = preload("res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_circuito_1.mp3")
@@ -23,11 +26,12 @@ var SOUND14 = preload("res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_ci
 var SOUND15 = preload("res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_circuito_fim.mp3")
 var SOUND16 = preload("res://Audio/AudioInclusive/HoverInfo/Lab257/hover_info_circuito_inicio.mp3")
 var SOUNDARRAY = [SOUND1, SOUND2, SOUND3, SOUND4, SOUND5, SOUND6, SOUND7, SOUND15, SOUND8, SOUND9, SOUND10, SOUND11, SOUND16, SOUND12, SOUND13, SOUND14]
+var SOUNDARRAY2 = [SOUND1, SOUND2, SOUND3, SOUND4, SOUND5, SOUND6]
 
 onready var destinyButton = $TextureRect8
 
 func _ready():
-	selected_index = 0
+	available_selected_index = 0
 	for i in panels.size():
 		panels[i].connect("gui_input", self, "_on_panel_gui_input", [i])
 		panels[i].connect("mouse_entered", self, "_on_panel_mouse_entered", [i])
@@ -47,18 +51,17 @@ func _input(event):
 			if event is InputEventKey:
 				if event.scancode == KEY_TAB and event.pressed:
 					
-					if selected_index + 1 >= panels.size():  
+					if available_selected_index + 1 > available_index.size():  
 						AudioPlayer.stop_all_audios_bus("MenuSpeech")
-						AudioPlayer.play_one_shot(SOUNDARRAY[selected_index], "MenuSpeech")	 
-						selected_index = 0
-					elif selected_index == 6 or selected_index == 11: 
-						AudioPlayer.stop_all_audios_bus("MenuSpeech")
-						AudioPlayer.play_one_shot(SOUNDARRAY[selected_index], "MenuSpeech")
-						selected_index += 2
+						AudioPlayer.play_one_shot(SOUNDARRAY2[available_selected_index], "MenuSpeech")	 
+						available_selected_index = 0
+						selected_index = available_index[available_selected_index]
+						
 					else: 
+						selected_index = available_index[available_selected_index]
 						AudioPlayer.stop_all_audios_bus("MenuSpeech")
-						AudioPlayer.play_one_shot(SOUNDARRAY[selected_index], "MenuSpeech")
-						selected_index += 1
+						AudioPlayer.play_one_shot(SOUNDARRAY2[available_selected_index], "MenuSpeech")
+						available_selected_index += 1
 						
 						
 					 
@@ -73,8 +76,8 @@ func _input(event):
 							
 						if check_completion() == true:
 							destinyButton.texture = load("res://Interactables/Puzzles/ConnectPath/greenLight.png")
-							get_parent().complete()
 							completed = true
+							get_parent().complete()
 		
 func _on_panel_gui_input(event, index):
 	if not completed and isMouseOverPanel:
