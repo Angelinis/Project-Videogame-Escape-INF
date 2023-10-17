@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/SalaSergio/Wall1/sergioescritorio_wall1.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Interactables/Readable/Dica/FolhaDica.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interactables/Readable/Folhas/Folha.png" type="Texture" id=5]
 [ext_resource path="res://Interactables/Readable/ReadableArea.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Audio/AudioInclusive/SergioRoom/sergio_quadro_branco.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Audio/AudioInclusive/SergioRoom/folha_papel_sergio.mp3" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -18,9 +20,20 @@ texture = ExtResource( 2 )
 
 [node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 3 )]
 nome = "Quadro branco"
+audio = ExtResource( 7 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
 position = Vector2( 0, -10 )
+polygon = PoolVector2Array( 71, 114, 71, 42, 250, 42, 250, 114 )
+
+[node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 3 )]
+nome = "Folha de papel"
+audio = ExtResource( 8 )
+bottom_area_path = "ReadableArea"
+
+[node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
+position = Vector2( 258.705, 31.9063 )
+scale = Vector2( 0.132682, 0.494792 )
 polygon = PoolVector2Array( 71, 114, 71, 42, 250, 42, 250, 114 )
 
 [node name="ReadableArea" parent="." index="2" instance=ExtResource( 6 )]
@@ -34,4 +47,5 @@ texture = ExtResource( 5 )
 shape = SubResource( 1 )
 
 [editable path="HoverInfos/HoverInfo"]
+[editable path="HoverInfos/HoverInfo2"]
 [editable path="ReadableArea"]

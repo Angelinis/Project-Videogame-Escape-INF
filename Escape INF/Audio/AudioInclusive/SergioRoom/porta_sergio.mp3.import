@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/porta_sergio.mp3-e875921cf5fff2b36c22ea11d58df33b.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/SergioRoom/porta_sergio.mp3"
+dest_files=[ "res://.import/porta_sergio.mp3-e875921cf5fff2b36c22ea11d58df33b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

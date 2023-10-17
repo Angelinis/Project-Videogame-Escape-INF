@@ -81,6 +81,7 @@ polygon = PoolVector2Array( 162, 114, 197, 114, 197, 133, 190, 140, 163, 140, 16
 [node name="HoverInfo4" parent="HoverInfos" index="2" instance=ExtResource( 12 )]
 nome = "Foto"
 audio = ExtResource( 11 )
+bottom_area_path = "PuzzleArea"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo4" index="0"]
 position = Vector2( 0, -11 )

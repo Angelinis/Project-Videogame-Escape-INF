@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/maquina_cafe_sergio.mp3-61579cf3fa46e505390a4c8606427e96.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/SergioRoom/maquina_cafe_sergio.mp3"
+dest_files=[ "res://.import/maquina_cafe_sergio.mp3-61579cf3fa46e505390a4c8606427e96.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

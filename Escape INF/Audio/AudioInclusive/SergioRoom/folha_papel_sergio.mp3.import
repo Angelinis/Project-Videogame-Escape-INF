@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/folha_papel_sergio.mp3-7d32f45b62aaadd5d91b1085df8d91ed.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/SergioRoom/folha_papel_sergio.mp3"
+dest_files=[ "res://.import/folha_papel_sergio.mp3-7d32f45b62aaadd5d91b1085df8d91ed.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -2,11 +2,29 @@ extends Control
 
 var salas = null
 
+var selected_sala_index
+var selected_sala
+
+var LAB257 = preload("res://Audio/AudioInclusive/PlantaBaixa/lab257_planta_baixa.mp3")
+var PATIO = preload("res://Audio/AudioInclusive/PlantaBaixa/patio_planta_baixa.mp3")
+var LAB152 = preload("res://Audio/AudioInclusive/PlantaBaixa/lab152_planta_baixa.mp3")
+var LAB251 = preload("res://Audio/AudioInclusive/PlantaBaixa/lab251_planta_baixa.mp3")
+var SALASERGIO = preload("res://Audio/AudioInclusive/PlantaBaixa/salasergio_planta_baixa.mp3")
+var COPA = preload("res://Audio/AudioInclusive/PlantaBaixa/copa_planta_baixa.mp3")
+var NRC = preload("res://Audio/AudioInclusive/PlantaBaixa/nrc_planta_baixa.mp3")
+var SECRETARIA = preload("res://Audio/AudioInclusive/PlantaBaixa/secretaria_planta_baixa.mp3")
+var SAIDA = preload("res://Audio/AudioInclusive/PlantaBaixa/saida_planta_baixa.mp3")
+
+var SOUNDARRAY = [LAB257, PATIO, LAB152, LAB251, SALASERGIO, COPA, NRC, SECRETARIA, SAIDA]
+
+
+
 onready var labelNomeSala = $LabelNomeSalas
 onready var salasControl = $Salas
 
 func _ready():
 	labelNomeSala.text = ""
+	selected_sala_index = 0
 	
 	salas = salasControl.get_children()
 	for i in range(salas.size()):
@@ -19,65 +37,19 @@ func on_sala_mouse_entered(index):
 func on_sala_mouse_exited():
 	labelNomeSala.text = ""
 
-##########################################################
-#
-#func _input(event):
-#	if event is InputEventKey and event.is_pressed():
-#		if event.scancode == KEY_TAB:
-#			select_next_button()
-#		elif event.scancode == KEY_ENTER:
-#			select_current_button()
-#
-#
-#
-#func _on_PlayButton_pressed():
-#	if not ProgressManager.game_started:
-#		SceneTransition.transition_scene(first_scene)
-#		ProgressManager.game_started = true
-#	else:
-#		SceneTransition.transition_scene("res://Rooms/Lab257/Lab257.tscn")
-#
-#func _on_QuitButton_pressed():
-#	get_tree().quit()
-#
-#func _on_TutorialButton_pressed():
-#	var _b = get_tree().change_scene(tutorial_scene)
-#
-#
-#
-#
-#func select_next_button():
-#	selectedButtonIndex += 1
-#	if selectedButtonIndex >= 3:
-#		selectedButtonIndex = 0
-#
-#	update_button_selection()
-#
-#func select_current_button():
-#	match selectedButtonIndex:
-#		0:
-#			_on_PlayButton_pressed()
-#		1:
-#			_on_TutorialButton_pressed()
-#		2:
-#			_on_QuitButton_pressed()
-#
-#var SOUNDMENU1 = preload("res://Audio/AudioInclusive/MainMenu/main_menu_jogar_voice_text.mp3")
-#var SOUNDMENU2 = preload("res://Audio/AudioInclusive/MainMenu/main_menu_como_jogar_voice_text.mp3")
-#var SOUNDMENU3 = preload("res://Audio/AudioInclusive/MainMenu/main_menu_sair_voice_text.mp3")
-#var SOUNDMENU4 = preload("res://Audio/AudioInclusive/MainMenu/main_menu_continuar_voice_text.mp3")
-#var SOUNDARRAY = [SOUNDMENU1, SOUNDMENU2, SOUNDMENU3, SOUNDMENU4]
-#
-#
-#func update_button_selection():
-#	for i in range($Buttons.get_child_count()):
-#		var button = $Buttons.get_child(i)
-#
-#		if i == selectedButtonIndex:
-#			if i ==0 and $Buttons/PlayButton.text == "CONTINUAR":
-#				i = 3
-#			button.add_color_override("font_color", Color(1, 1, 1))
-#			AudioPlayer.play_one_shot(SOUNDARRAY[i], "MenuSpeech") 
-#		else:
-#			button.add_color_override("font_color", Color(0.5, 0.5, 0.5))
-#
+func _input(event):
+	if event is InputEventKey and event.is_pressed():
+		if event.scancode == KEY_TAB:
+			if selected_sala_index < salas.size() - 1:
+				selected_sala_index += 1
+				salas[selected_sala_index]
+				AudioPlayer.stop_all_audios_bus("MenuSpeech")
+				AudioPlayer.play_one_shot(SOUNDARRAY[selected_sala_index] , "MenuSpeech") 
+			else:
+				selected_sala_index = 0
+				AudioPlayer.stop_all_audios_bus("MenuSpeech")
+				AudioPlayer.play_one_shot(SOUNDARRAY[selected_sala_index] , "MenuSpeech") 
+			
+		elif event.scancode == KEY_ENTER:
+			salas[selected_sala_index].handle_emulated_input()
+

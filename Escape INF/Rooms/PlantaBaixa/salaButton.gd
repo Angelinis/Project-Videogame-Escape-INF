@@ -8,3 +8,8 @@ func _ready():
 	
 func on_button_pressed():
 	var _a = get_tree().change_scene_to(sala_destino)
+
+func handle_emulated_input():
+	var _a = get_tree().change_scene_to(sala_destino)
+		
+		

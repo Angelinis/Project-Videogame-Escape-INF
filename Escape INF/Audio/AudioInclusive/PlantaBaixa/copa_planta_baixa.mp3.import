@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/copa_planta_baixa.mp3-51e9079b609a44132978c8402a20a7c9.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/PlantaBaixa/copa_planta_baixa.mp3"
+dest_files=[ "res://.import/copa_planta_baixa.mp3-51e9079b609a44132978c8402a20a7c9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
