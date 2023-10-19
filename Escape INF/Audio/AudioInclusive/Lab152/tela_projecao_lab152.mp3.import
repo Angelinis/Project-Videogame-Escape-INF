@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tela_projecao_lab152.mp3-6e416ee4f9c1043024f006f68f9884a0.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Lab152/tela_projecao_lab152.mp3"
+dest_files=[ "res://.import/tela_projecao_lab152.mp3-6e416ee4f9c1043024f006f68f9884a0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

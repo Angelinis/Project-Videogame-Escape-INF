@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ar_condicionado_lab152.mp3-f22cd024327239c7892ce4d0005c652a.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Lab152/ar_condicionado_lab152.mp3"
+dest_files=[ "res://.import/ar_condicionado_lab152.mp3-f22cd024327239c7892ce4d0005c652a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

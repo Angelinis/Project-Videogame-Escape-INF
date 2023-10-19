@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/outra_cortina_copa.mp3-40effb984c1dfb919c5b7497935eb65b.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Copa/outra_cortina_copa.mp3"
+dest_files=[ "res://.import/outra_cortina_copa.mp3-40effb984c1dfb919c5b7497935eb65b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cadeiras_lab152.mp3-1b11a6c56c1b6609985947fcd5d0b690.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Lab152/cadeiras_lab152.mp3"
+dest_files=[ "res://.import/cadeiras_lab152.mp3-1b11a6c56c1b6609985947fcd5d0b690.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/geladeira_copa.mp3-15e46bef63ee1909f1258995a4a2ac15.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Copa/geladeira_copa.mp3"
+dest_files=[ "res://.import/geladeira_copa.mp3-15e46bef63ee1909f1258995a4a2ac15.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

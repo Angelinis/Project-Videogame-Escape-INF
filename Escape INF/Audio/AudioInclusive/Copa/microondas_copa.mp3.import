@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/microondas_copa.mp3-39dbffa7fe1a9581d6fe8709de983f31.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Copa/microondas_copa.mp3"
+dest_files=[ "res://.import/microondas_copa.mp3-39dbffa7fe1a9581d6fe8709de983f31.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

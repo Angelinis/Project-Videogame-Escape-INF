@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/extintor_lab152.mp3-895740a59916efeab5e977bd140bf0ac.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Lab152/extintor_lab152.mp3"
+dest_files=[ "res://.import/extintor_lab152.mp3-895740a59916efeab5e977bd140bf0ac.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

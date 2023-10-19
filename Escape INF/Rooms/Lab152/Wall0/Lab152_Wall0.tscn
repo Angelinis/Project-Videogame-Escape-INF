@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/Lab152/Wall0/lab152_wall0.png" type="Texture" id=2]
@@ -12,6 +12,11 @@
 [ext_resource path="res://Interactables/Readable/Monitores/logo.png" type="Texture" id=10]
 [ext_resource path="res://Interactables/Readable/Monitores/SuperComputador.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Rooms/Lab152/Wall0/InvisibleReadable.gd" type="Script" id=12]
+[ext_resource path="res://Audio/AudioInclusive/Lab152/outra_fila_computadores_lab152.mp3" type="AudioStream" id=13]
+[ext_resource path="res://Audio/AudioInclusive/Lab152/tela_projecao_lab152.mp3" type="AudioStream" id=14]
+[ext_resource path="res://Audio/AudioInclusive/Lab152/fila_computadores_lab152.mp3" type="AudioStream" id=15]
+[ext_resource path="res://Audio/AudioInclusive/Lab152/projetor_lab152.mp3" type="AudioStream" id=16]
+[ext_resource path="res://Audio/AudioInclusive/Lab152/espaco_vazio_lab152.mp3" type="AudioStream" id=17]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.870588, 0.870588, 0.952941, 1 )
@@ -127,6 +132,7 @@ shape = SubResource( 6 )
 
 [node name="HoverInfo2" parent="HoverInfos" index="0" instance=ExtResource( 8 )]
 nome = "Tela de Projeção"
+audio = ExtResource( 14 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
 position = Vector2( -1, 0 )
@@ -134,24 +140,28 @@ polygon = PoolVector2Array( 101, 30, 101, 102, 220, 102, 219, 30 )
 
 [node name="HoverInfo3" parent="HoverInfos" index="1" instance=ExtResource( 8 )]
 nome = "Projetor"
+audio = ExtResource( 16 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
 polygon = PoolVector2Array( 131, 4, 131, 10, 136, 22, 163, 22, 165, 14, 159, 5 )
 
 [node name="HoverInfo4" parent="HoverInfos" index="2" instance=ExtResource( 8 )]
 nome = "Computadores"
+audio = ExtResource( 15 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo4" index="0"]
 polygon = PoolVector2Array( 4, 140, 2, 165, 127, 166, 128, 139 )
 
 [node name="HoverInfo5" parent="HoverInfos" index="3" instance=ExtResource( 8 )]
 nome = "Computadores"
+audio = ExtResource( 13 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo5" index="0"]
 polygon = PoolVector2Array( 191, 144, 188, 170, 314, 170, 314, 142 )
 
 [node name="HoverInfo" parent="HoverInfos" index="4" instance=ExtResource( 8 )]
 nome = "?"
+audio = ExtResource( 17 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
 polygon = PoolVector2Array( 43, 90, 76, 91, 76, 104, 44, 104 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/outra_folha_copa.mp3-bd01149449309d521f40e6cf25f55bbc.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Copa/outra_folha_copa.mp3"
+dest_files=[ "res://.import/outra_folha_copa.mp3-bd01149449309d521f40e6cf25f55bbc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

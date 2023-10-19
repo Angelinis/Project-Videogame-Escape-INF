@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/papel_copa.mp3-aeb32efbbc752270b2019e00e61b8e73.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Copa/papel_copa.mp3"
+dest_files=[ "res://.import/papel_copa.mp3-aeb32efbbc752270b2019e00e61b8e73.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

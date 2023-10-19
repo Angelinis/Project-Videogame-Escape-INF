@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/macaco_copa.mp3-95d023a6a40ccac3769f8d4e23a64143.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Copa/macaco_copa.mp3"
+dest_files=[ "res://.import/macaco_copa.mp3-95d023a6a40ccac3769f8d4e23a64143.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

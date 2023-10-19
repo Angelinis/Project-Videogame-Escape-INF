@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/notebook_copa.mp3-a93a780179318c0491dc4840b6d94a77.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Copa/notebook_copa.mp3"
+dest_files=[ "res://.import/notebook_copa.mp3-a93a780179318c0491dc4840b6d94a77.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

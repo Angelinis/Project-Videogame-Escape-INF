@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/porta_copa.mp3-8017a16406a94c63685db2273426ffa2.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Copa/porta_copa.mp3"
+dest_files=[ "res://.import/porta_copa.mp3-8017a16406a94c63685db2273426ffa2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

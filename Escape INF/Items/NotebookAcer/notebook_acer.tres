@@ -1,10 +1,12 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://Items/Item.gd" type="Script" id=1]
 [ext_resource path="res://Items/NotebookAcer/Acer.png" type="Texture" id=2]
+[ext_resource path="res://Items/NotebookAcer/notebook_tres.mp3" type="AudioStream" id=3]
 
 [resource]
 script = ExtResource( 1 )
 name = "Acer Nitro"
 sprite = ExtResource( 2 )
 description = "Um notebook super potente que vai te ajudar a passar nas suas materias. Roda até Unity!"
+audio = ExtResource( 3 )

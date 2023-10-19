@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/porta_lab152.mp3-97d2e949bd099b37fb26c7a078ffc360.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Lab152/porta_lab152.mp3"
+dest_files=[ "res://.import/porta_lab152.mp3-97d2e949bd099b37fb26c7a078ffc360.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

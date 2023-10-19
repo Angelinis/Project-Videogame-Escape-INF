@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/patio_convivencia.mp3-0c08fe0f4a73a5dd8ea44076a47ba72c.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Patio/patio_convivencia.mp3"
+dest_files=[ "res://.import/patio_convivencia.mp3-0c08fe0f4a73a5dd8ea44076a47ba72c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

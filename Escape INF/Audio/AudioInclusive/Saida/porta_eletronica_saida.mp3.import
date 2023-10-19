@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/porta_eletronica_saida.mp3-a124572017540e23ed2504fda054c4e5.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Saida/porta_eletronica_saida.mp3"
+dest_files=[ "res://.import/porta_eletronica_saida.mp3-a124572017540e23ed2504fda054c4e5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

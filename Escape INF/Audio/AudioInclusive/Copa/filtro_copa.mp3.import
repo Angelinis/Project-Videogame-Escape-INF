@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/filtro_copa.mp3-4ebed3ccd44e8f08f037aedb21c694a1.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Copa/filtro_copa.mp3"
+dest_files=[ "res://.import/filtro_copa.mp3-4ebed3ccd44e8f08f037aedb21c694a1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

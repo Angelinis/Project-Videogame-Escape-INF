@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fila_computadores_lab152.mp3-56b66aa655b5bd1f3c5e3d666281c3da.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Lab152/fila_computadores_lab152.mp3"
+dest_files=[ "res://.import/fila_computadores_lab152.mp3-56b66aa655b5bd1f3c5e3d666281c3da.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

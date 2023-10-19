@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mesa_lab152.mp3-52c8bfc5a598a1a1be48a0b40920283a.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Lab152/mesa_lab152.mp3"
+dest_files=[ "res://.import/mesa_lab152.mp3-52c8bfc5a598a1a1be48a0b40920283a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

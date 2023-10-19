@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/extintor_patio.mp3-8ff31e27a87abf511cbda79a98f48f07.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Patio/extintor_patio.mp3"
+dest_files=[ "res://.import/extintor_patio.mp3-8ff31e27a87abf511cbda79a98f48f07.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

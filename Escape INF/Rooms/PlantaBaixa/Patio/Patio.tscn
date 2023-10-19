@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rooms/PlantaBaixa/Patio/Patio.png" type="Texture" id=2]
+[ext_resource path="res://Audio/AudioInclusive/Patio/extintor_patio.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Audio/AudioInclusive/Patio/placa_saida_patio.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Audio/AudioInclusive/Patio/patio_convivencia.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Audio/AudioInclusive/Patio/papel_informativo_patio.mp3" type="AudioStream" id=7]
 
 [node name="Patio_Wall0" instance=ExtResource( 1 )]
 
@@ -13,24 +17,28 @@ texture = ExtResource( 2 )
 
 [node name="HoverInfo" parent="HoverInfos" index="0" instance=ExtResource( 4 )]
 nome = "Extintor de Incêndio"
+audio = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
 polygon = PoolVector2Array( 28, 61, 48, 61, 43, 100, 30, 101 )
 
 [node name="HoverInfo2" parent="HoverInfos" index="1" instance=ExtResource( 4 )]
 nome = "Pátio de Convivência do INF"
+audio = ExtResource( 6 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
 polygon = PoolVector2Array( 139, 76, 188, 77, 212, 141, 124, 137 )
 
 [node name="HoverInfo3" parent="HoverInfos" index="2" instance=ExtResource( 4 )]
 nome = "Placa de saída de emergência"
+audio = ExtResource( 5 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
 polygon = PoolVector2Array( 24, 10, 52, 11, 52, 20, 23, 19 )
 
 [node name="HoverInfo4" parent="HoverInfos" index="3" instance=ExtResource( 4 )]
 nome = "Papel Informativo sobre o telhado"
+audio = ExtResource( 7 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo4" index="0"]
 polygon = PoolVector2Array( 115, 11, 240, 13, 240, 69, 116, 69 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/pia_copa.mp3-cc026f3536bd2dd757cace6984a550e8.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Copa/pia_copa.mp3"
+dest_files=[ "res://.import/pia_copa.mp3-cc026f3536bd2dd757cace6984a550e8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

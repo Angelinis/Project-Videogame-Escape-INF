@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Rooms/PlantaBaixa/Saida/Saida.png" type="Texture" id=1]
 [ext_resource path="res://Rooms/BaseWall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Interactables/HoverInfo/HoverInfo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Rooms/PlantaBaixa/Saida/Door.gd" type="Script" id=4]
 [ext_resource path="res://Rooms/PlantaBaixa/Saida/Saida2.png" type="Texture" id=5]
+[ext_resource path="res://Audio/AudioInclusive/Saida/porta_trancada_saida.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Audio/AudioInclusive/Saida/porta_eletronica_saida.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Audio/AudioInclusive/Saida/escaner_saida.mp3" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 55, 79 )
@@ -32,18 +35,22 @@ shape = SubResource( 1 )
 
 [node name="HoverInfo2" parent="HoverInfos" index="0" instance=ExtResource( 3 )]
 nome = "Porta trancada com chave"
+audio = ExtResource( 6 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo2" index="0"]
 polygon = PoolVector2Array( 8, 166, 109, 167, 109, 9, 6, 9, 6, 164 )
 
 [node name="HoverInfo3" parent="HoverInfos" index="1" instance=ExtResource( 3 )]
 nome = "Scaner"
+audio = ExtResource( 8 )
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo3" index="0"]
 polygon = PoolVector2Array( 271, 20, 271, 73, 302, 72, 301, 19 )
 
 [node name="HoverInfo" parent="HoverInfos" index="2" instance=ExtResource( 3 )]
 nome = "Porta com fechadura eletrônica"
+audio = ExtResource( 7 )
+bottom_area_path = "Door"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
 position = Vector2( -0.501793, 1.43471 )

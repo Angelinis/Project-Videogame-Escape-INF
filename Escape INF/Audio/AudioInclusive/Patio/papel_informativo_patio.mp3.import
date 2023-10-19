@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/papel_informativo_patio.mp3-c3ec6ecca0705ab0b0da5ef730da9030.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Patio/papel_informativo_patio.mp3"
+dest_files=[ "res://.import/papel_informativo_patio.mp3-c3ec6ecca0705ab0b0da5ef730da9030.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cortina_persianas_lab152.mp3-8760c7f0568051590114836bd01a0783.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Lab152/cortina_persianas_lab152.mp3"
+dest_files=[ "res://.import/cortina_persianas_lab152.mp3-8760c7f0568051590114836bd01a0783.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/espaco_vazio_lab152.mp3-011c283becf68aa6a16bacc6f5109919.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Lab152/espaco_vazio_lab152.mp3"
+dest_files=[ "res://.import/espaco_vazio_lab152.mp3-011c283becf68aa6a16bacc6f5109919.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -14,6 +14,7 @@ var COPA = preload("res://Audio/AudioInclusive/PlantaBaixa/copa_planta_baixa.mp3
 var NRC = preload("res://Audio/AudioInclusive/PlantaBaixa/nrc_planta_baixa.mp3")
 var SECRETARIA = preload("res://Audio/AudioInclusive/PlantaBaixa/secretaria_planta_baixa.mp3")
 var SAIDA = preload("res://Audio/AudioInclusive/PlantaBaixa/saida_planta_baixa.mp3")
+var PLANTABAIXA = preload("res://Audio/AudioInclusive/PlantaBaixa/planta_baixa_environment.mp3")
 
 var SOUNDARRAY = [LAB257, PATIO, LAB152, LAB251, SALASERGIO, COPA, NRC, SECRETARIA, SAIDA]
 
@@ -23,6 +24,8 @@ onready var labelNomeSala = $LabelNomeSalas
 onready var salasControl = $Salas
 
 func _ready():
+	AudioPlayer.stop_all_audios_bus("MenuSpeech")
+	AudioPlayer.play_one_shot(PLANTABAIXA , "MenuSpeech") 
 	labelNomeSala.text = ""
 	selected_sala_index = 0
 	
@@ -42,7 +45,7 @@ func _input(event):
 		if event.scancode == KEY_TAB:
 			if selected_sala_index < salas.size() - 1:
 				selected_sala_index += 1
-				salas[selected_sala_index]
+
 				AudioPlayer.stop_all_audios_bus("MenuSpeech")
 				AudioPlayer.play_one_shot(SOUNDARRAY[selected_sala_index] , "MenuSpeech") 
 			else:

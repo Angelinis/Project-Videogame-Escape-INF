@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/projetor_lab152.mp3-1d671fa60add5e643175b35793d805b0.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Lab152/projetor_lab152.mp3"
+dest_files=[ "res://.import/projetor_lab152.mp3-1d671fa60add5e643175b35793d805b0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
