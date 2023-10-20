@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/level5_paper.mp3-af154adbc3ede720793870eb14b7a970.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Lab152/level5_paper.mp3"
+dest_files=[ "res://.import/level5_paper.mp3-af154adbc3ede720793870eb14b7a970.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

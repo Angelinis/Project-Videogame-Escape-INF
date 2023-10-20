@@ -77,6 +77,7 @@ polygon = PoolVector2Array( 171, 111, 170, 229, 255, 231, 255, 113 )
 nome = "Notebook Acer"
 audio = ExtResource( 9 )
 collectable_path = NodePath("../../Collectable")
+bottom_area_path = "Collectable"
 
 [node name="CollisionShape2D" parent="HoverInfos/HoverInfo" index="0"]
 polygon = PoolVector2Array( 171, 111, 171, 140, 218, 141, 218, 111 )

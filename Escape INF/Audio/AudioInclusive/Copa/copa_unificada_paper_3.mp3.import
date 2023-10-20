@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/copa_unificada_paper_3.mp3-38aebcc9a7e3fc2fe44ed8cb6f9222f5.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Copa/copa_unificada_paper_3.mp3"
+dest_files=[ "res://.import/copa_unificada_paper_3.mp3-38aebcc9a7e3fc2fe44ed8cb6f9222f5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -29,9 +29,8 @@ func handle_emulated_input():
 #	if readable_opened == false:
 #	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 		AudioPlayer.play_audio(preload("res://Audio/SFX/paper.wav"), "Sound")
-		readable_instance = readable_scene.instance()
 		
-		get_tree().get_current_scene().add_child(readable_instance)
+		get_tree().get_current_scene().add_child(readable_scene.instance())
 		get_tree().set_input_as_handled()
 		
 		

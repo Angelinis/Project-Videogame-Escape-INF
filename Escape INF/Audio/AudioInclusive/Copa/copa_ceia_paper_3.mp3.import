@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/copa_ceia_paper_3.mp3-48e33c9029c81edc9f1621fc0ee11a39.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Copa/copa_ceia_paper_3.mp3"
+dest_files=[ "res://.import/copa_ceia_paper_3.mp3-48e33c9029c81edc9f1621fc0ee11a39.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
