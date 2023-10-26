@@ -6,6 +6,7 @@ const SELECTED_ITEM_PANEL = preload("res://Interface/InventoryRect/selectedItemP
 const BACKPACK_CLOSED = preload("res://Audio/AudioInclusive/UI/ui_backpack_closed.mp3")
 const BACKPACK_OPEN = preload("res://Audio/AudioInclusive/UI/ui_backpack_open.mp3")
 const SELECTED_ITEM = preload("res://Audio/AudioInclusive/Inventory/selected_item_sound.mp3")
+const SELECTED_ITEM_2 = preload("res://Audio/AudioInclusive/Inventory/item_backpack_accessibility.mp3")
 
 var simulated_index_hover_info := 0
 var total_items
@@ -77,12 +78,16 @@ func _input(event):
 					selected_slot_index = total_items - 1
 					select_slot(selected_slot_index)
 					AudioPlayer.stop_all_audios_bus("UISound")
+					AudioPlayer.stop_all_audios_bus("MenuSpeech")
 					AudioPlayer.play_one_shot(SELECTED_ITEM, "UISound") 
+					AudioPlayer.play_one_shot(SELECTED_ITEM_2, "MenuSpeech") 
 				else:
 					selected_slot_index = simulated_index_hover_info - 1
 					select_slot(selected_slot_index)
 					AudioPlayer.stop_all_audios_bus("UISound")
+					AudioPlayer.stop_all_audios_bus("MenuSpeech")
 					AudioPlayer.play_one_shot(SELECTED_ITEM, "UISound") 
+					AudioPlayer.play_one_shot(SELECTED_ITEM_2, "MenuSpeech") 
 
 				
 			

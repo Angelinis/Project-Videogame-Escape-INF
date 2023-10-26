@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/folha_sergio_dica.mp3-e9e5c7b8603b5dd784584b886d7c7147.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/SergioRoom/readable/folha_sergio_dica.mp3"
+dest_files=[ "res://.import/folha_sergio_dica.mp3-e9e5c7b8603b5dd784584b886d7c7147.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

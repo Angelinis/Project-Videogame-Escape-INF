@@ -1,6 +1,8 @@
 extends Area2D
 
 const SPEECH_1 = preload("res://Audio/AudioInclusive/Interactable/Door/interactable_door_closed.mp3")
+const USED_COLLECTED_1 = preload("res://Audio/AudioInclusive/Interactable/Collectable/collected_item_used_part1.mp3")
+const USED_COLLECTED_2 = preload("res://Audio/AudioInclusive/Interactable/Collectable/collected_item_used_door_part2.mp3")
 
 export(bool) var locked := false
 
@@ -44,7 +46,7 @@ func interact():
 	
 	if locked:
 		if Inventory.get_selected_item() == item_needed:
-			TextBox.show_texts(["Você usou " + item_needed.name + " para destrancar a porta."])
+			TextBox.show_special_text("Você usou " + item_needed.name + " para destrancar a porta.", [USED_COLLECTED_1, item_needed.collected_audio , USED_COLLECTED_2])
 			locked = false
 			ProgressManager.add_unlocked_door(room_file, wall_name)
 			AudioPlayer.play_audio(preload("res://Audio/SFX/door-unlock.wav"), "Sound")

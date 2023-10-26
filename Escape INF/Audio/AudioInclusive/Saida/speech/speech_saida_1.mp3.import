@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/speech_saida_1.mp3-335a985d54a75c399e3d1f5b88cdb414.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Saida/speech/speech_saida_1.mp3"
+dest_files=[ "res://.import/speech_saida_1.mp3-335a985d54a75c399e3d1f5b88cdb414.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

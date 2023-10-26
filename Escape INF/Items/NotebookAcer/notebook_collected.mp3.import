@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/notebook_collected.mp3-9a9ec3c5e711880868298d70364346fb.mp3str"
+
+[deps]
+
+source_file="res://Items/NotebookAcer/notebook_collected.mp3"
+dest_files=[ "res://.import/notebook_collected.mp3-9a9ec3c5e711880868298d70364346fb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

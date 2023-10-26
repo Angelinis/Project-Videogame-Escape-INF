@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/folha_sergio_composicao_inteira.mp3-a94ebbb7d6e613d8d2071ecc9c9dcc3c.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/SergioRoom/readable/folha_sergio_composicao_inteira.mp3"
+dest_files=[ "res://.import/folha_sergio_composicao_inteira.mp3-a94ebbb7d6e613d8d2071ecc9c9dcc3c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

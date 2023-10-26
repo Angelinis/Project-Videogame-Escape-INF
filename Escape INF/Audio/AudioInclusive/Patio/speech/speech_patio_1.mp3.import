@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/speech_patio_1.mp3-fa8bfafcab8da25f792fd79e01b7745a.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Patio/speech/speech_patio_1.mp3"
+dest_files=[ "res://.import/speech_patio_1.mp3-fa8bfafcab8da25f792fd79e01b7745a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

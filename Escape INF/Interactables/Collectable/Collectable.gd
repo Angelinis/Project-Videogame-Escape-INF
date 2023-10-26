@@ -4,6 +4,9 @@ export(Resource) var item_data
 
 const SFX = preload("res://Interactables/Collectable/CollectableSFX.wav")
 
+const AUDIO_1 = preload("res://Audio/AudioInclusive/Interactable/Collectable/collected_item_part1.mp3")
+const AUDIO_2 = preload("res://Audio/AudioInclusive/Interactable/Collectable/collected_item_part2.mp3")
+
 var _hovering = false
 
 onready var sprite := $Sprite
@@ -36,7 +39,9 @@ func handle_emulated_input():
 
 func collect():
 		print("ITEM:" + item_data.name + " coletado!")
-		TextBox.show_texts(["Você colocou " + item_data.name + " na sua mochila."])
+		
+		TextBox.show_special_text("Você colocou " + item_data.name + " na sua mochila.", [AUDIO_1, item_data.collected_audio , AUDIO_2])
+		
 		Inventory.add_item(item_data)
 	
 		var room_file = get_tree().current_scene.filename

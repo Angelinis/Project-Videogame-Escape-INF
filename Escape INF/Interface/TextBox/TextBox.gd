@@ -29,6 +29,24 @@ func show_texts(_texts, _audios=[]):
 		_show_text(texts[text_count], audios[text_count])
 
 
+func show_special_text(_text, _audio = false):
+	show()
+	self.done = false
+	showing = true
+	icon.hide()
+	
+	textLabel.text = _text
+	textLabel.visible_characters = 0
+	timer.start(time)
+	
+	if (_audio):
+		_audio.append(PROCCEED_AUDIO) 
+		AudioPlayer.stop_all_audios_bus("CharacterSpeech")
+		AudioPlayer.stop_all_audios_bus("MenuSpeech")
+		AudioPlayer.play_audios(_audio, "CharacterSpeech")
+#		AudioPlayer.play_audio(_audio, "CharacterSpeech")
+
+
 func _show_text(_text, _audio = false):
 	self.done = false
 	showing = true

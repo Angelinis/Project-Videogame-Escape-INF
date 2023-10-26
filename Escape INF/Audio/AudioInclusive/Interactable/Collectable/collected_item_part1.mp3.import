@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/collected_item_part1.mp3-042e81398639778d941cc92abda5f902.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Interactable/Collectable/collected_item_part1.mp3"
+dest_files=[ "res://.import/collected_item_part1.mp3-042e81398639778d941cc92abda5f902.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

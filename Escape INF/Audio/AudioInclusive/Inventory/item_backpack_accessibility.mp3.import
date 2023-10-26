@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/item_backpack_accessibility.mp3-27d599b01a622c0caac14415bb0e61fc.mp3str"
+
+[deps]
+
+source_file="res://Audio/AudioInclusive/Inventory/item_backpack_accessibility.mp3"
+dest_files=[ "res://.import/item_backpack_accessibility.mp3-27d599b01a622c0caac14415bb0e61fc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
