@@ -1,7 +1,13 @@
 # _EscapeINF_
 
-Projeto desenvolvido para a disciplina de Jogos Digitais 2022/2 do curso de Ciênica da Computação - UFG, com a implentação de um jogo do estilo "Espace Room" com mecânica “Point and Click” ambientado no Instituto de Informática com a Engine **`Godot`**.
+This is a project that was developed during the subject: "Digital Games" in 2022/2. This is a single player game from the point of view of a first person. It is an escape room game with “Point and Click” mechanics. It was used the Engine **`Godot`**.
 
-Esta é uma versao atualizada com planos de se tornar accesivel com alguns features de accesivilidade.
+The Version2.0 branch is an updated version of the game with plans to become an accessible version for visual impaired people.
 
-Referência: [**GDD**](https://docs.google.com/document/d/1HXcrXma3RucmHhb--1RO4DIWHW98b3QCt6LiyAA9aDk/edit?usp=sharing)
+This accessible version follows accessibility guidelines from the International Game Developers Association.
+
+The main game (not accessible) can be found in the Itch.io platform through the next link - https://infgames.itch.io/escape-inf
+
+References:
+[**Godot**](https://godotengine.org/)
+[**Accessibility Guidelines**](https://gameaccessibilityguidelines.com/)
